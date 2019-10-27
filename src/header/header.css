@@ -1,0 +1,15 @@
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+.dropdown > .dropdown-toggle:active {
+    pointer-events: none;
+}
+header nav {
+    background-color: #08202e;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(255,255,255,.6);
+}
+.navbar-light .navbar-nav .nav-link:hover{
+    color: white;
+}

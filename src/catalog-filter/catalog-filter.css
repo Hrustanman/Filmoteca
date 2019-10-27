@@ -1,0 +1,19 @@
+
+.done {
+    display: none;
+}
+.liItems {
+    z-index: 3;
+    position: absolute;
+    border: 1px solid;
+    border-radius: .25rem;
+    background-color: #fff;
+    margin-top : 30px
+  
+}
+.liItems ul {
+    padding: 5px;
+}
+    .liItems ul li {
+        text-align: center
+    }
