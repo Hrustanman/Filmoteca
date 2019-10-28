@@ -31,7 +31,7 @@ class App extends Component {
                 name: 'Ремпейдж',
                 year: 2018,
                 actor: '',
-                visible: true
+             
             },
             {
                 id: 2,
@@ -39,7 +39,7 @@ class App extends Component {
                 name: 'Cлоун',
                 year: 2018,
                 actor: '',
-                visible: false
+               
             },
             {
                 id: 3,
@@ -47,7 +47,7 @@ class App extends Component {
                 name: 'Невідомий',
                 year: 2011,
                 actor: '',
-                visible: true
+              
             },
             {
                 id: 4,
@@ -55,7 +55,7 @@ class App extends Component {
                 name: 'Зодіак',
                 year: 2007,
                 actor: '',
-                visible: true
+               
             },
             {
                 id: 5,
@@ -63,7 +63,7 @@ class App extends Component {
                 name: 'Законослухляний громадянин',
                 year: 2009,
                 actor: '',
-                visible: true
+                
             },
             {
                 id: 6,
@@ -71,7 +71,7 @@ class App extends Component {
                 name: 'Атлантида',
                 year: 2017,
                 actor: '',
-                visible: true
+                
             },
             {
                 id: 7,
@@ -79,7 +79,7 @@ class App extends Component {
                 name: 'Гарі Потер і філософський камінь',
                 year: 2001,
                 actor: '',
-                visible: true
+          
             },
             {
                 id: 8,
@@ -87,7 +87,7 @@ class App extends Component {
                 name: 'Апокаліпсис',
                 year: 2006,
                 actor: '',
-                visible: true
+              
             },
             {
                 id: 9,
@@ -95,7 +95,7 @@ class App extends Component {
                 name: 'Інтерстеллар',
                 year: 2014,
                 actor: ''
-                , visible: true
+               
             },
             {
                 id: 10,
@@ -103,7 +103,7 @@ class App extends Component {
                 name: 'Джунглі',
                 year: 2017,
                 actor: '',
-                visible: true
+               
             },
             {
                 id: 11,
@@ -111,7 +111,7 @@ class App extends Component {
                 name: 'Снайпер',
                 year: 2014,
                 actor: '',
-                visible: true
+                
             },
             {
                 id: 12,
@@ -119,7 +119,7 @@ class App extends Component {
                 name: 'Ігри розуму',
                 year: 2001,
                 actor: '',
-                visible: true
+                
             },
             {
                 id: 13,                                                      
@@ -127,7 +127,7 @@ class App extends Component {
                 name: 'В диких умовах',
                 year: 2007,
                 actor: '',
-                visible: true
+               
             }
 
 
@@ -250,10 +250,7 @@ class App extends Component {
         this.setState({ filmPresent })
         console.log({ filmPresent })
     }
-    visibleFilmposter = (visible) => {
-      return  this.setState({  visible: false })
-        console.log(visible)
-    }
+    
     render() {
         let filmPoster = this.state.filmPresent.map((filmPresent) => {
             return (
@@ -266,7 +263,7 @@ class App extends Component {
                     //key={filmPresent.id}
                     key={filmPresent.id}
                     //onDel={() => this.onDel(filmPresent.id)}
-                    visibleFilmposter={() => this.visibleFilmposter(filmPresent.visible)}
+                  
                 />
             )
 
