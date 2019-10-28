@@ -18,6 +18,9 @@ import jungle from './Images/jungle.jpg'
 import sniper from './Images/sniper.jpg'
 import mind from './Images/mind.jpg'
 import wild from './Images/into the wild.jpg'
+import QuickLink from './quickLink/quickLink';
+import Popup from 'reactjs-popup'
+
 
 class App extends Component {
     state = {
@@ -27,56 +30,64 @@ class App extends Component {
                 image: rempage,
                 name: 'Ремпейдж',
                 year: 2018,
-                actor: ''
+                actor: '',
+                visible: true
             },
             {
                 id: 2,
                 image: slown,
                 name: 'Cлоун',
                 year: 2018,
-                actor: ''
+                actor: '',
+                visible: false
             },
             {
                 id: 3,
                 image: unknow,
                 name: 'Невідомий',
                 year: 2011,
-                actor: ''
+                actor: '',
+                visible: true
             },
             {
                 id: 4,
                 image: zodiac,
                 name: 'Зодіак',
                 year: 2007,
-                actor: ''
+                actor: '',
+                visible: true
             },
             {
                 id: 5,
                 image: citizen,
                 name: 'Законослухляний громадянин',
                 year: 2009,
-                actor: ''
+                actor: '',
+                visible: true
             },
             {
                 id: 6,
                 image: atlantis,
                 name: 'Атлантида',
                 year: 2017,
-                actor: ''
+                actor: '',
+                visible: true
             },
             {
                 id: 7,
                 image: garry,
                 name: 'Гарі Потер і філософський камінь',
                 year: 2001,
-                actor: ''
+                actor: '',
+                visible: true
             },
             {
                 id: 8,
                 image: Apocalypto,
                 name: 'Апокаліпсис',
                 year: 2006,
-                actor: ''
+                actor: '',
+                visible: true
             },
             {
                 id: 9,
@@ -84,34 +95,39 @@ class App extends Component {
                 name: 'Інтерстеллар',
                 year: 2014,
                 actor: ''
+                , visible: true
             },
             {
                 id: 10,
                 image: jungle,
                 name: 'Джунглі',
                 year: 2017,
-                actor: ''
+                actor: '',
+                visible: true
             },
             {
                 id: 11,
                 image: sniper,
                 name: 'Снайпер',
                 year: 2014,
-                actor: ''
+                actor: '',
+                visible: true
             },
             {
                 id: 12,
                 image: mind,
                 name: 'Ігри розуму',
                 year: 2001,
-                actor: ''
+                actor: '',
+                visible: true
             },
             {
-                id: 13,                                                         /*   id для швидшох роботи з  dom*/
+                id: 13,                                                      
                 image: wild,
                 name: 'В диких умовах',
                 year: 2007,
-                actor: ''
+                actor: '',
+                visible: true
             }
 
 
@@ -144,6 +160,72 @@ class App extends Component {
             },
 
         ],
+        quickLink: [
+            {
+                quickLinkName: '2017',
+                id: 1
+             },
+            {
+                quickLinkName: '2018',
+                id: 2
+             },
+            {
+                quickLinkName: '2019',
+                id: 3
+             },
+            {
+                quickLinkName: 'Радянські фільми',
+                id: 4
+             },
+            {
+                quickLinkName: 'Американські фільми',
+                id: 5
+             },
+            {
+                quickLinkName: 'Зарубіжні фільми',
+                id: 6
+             },
+            {
+                quickLinkName: 'Трилери',
+                id: 7
+             },
+            {
+                quickLinkName: 'Пригодницькі',
+                id: 8
+             },
+            {
+                quickLinkName: 'Кримінальні',
+                id: 9
+             },
+            {
+                quickLinkName: 'Жахи',
+                id: 10
+             },
+            {
+                quickLinkName: 'Фантастика',
+                id: 11
+             },
+            {
+                quickLinkName: 'Історичні',
+                id: 12
+            },
+            {
+                quickLinkName: 'Фентезі',
+                id: 12
+            },
+            {
+                quickLinkName: 'Містичні',
+                id: 12
+            },
+            {
+                quickLinkName: 'Драми',
+                id: 12
+            },
+            {
+                quickLinkName: 'Комедії',
+                id: 12
+            },
+        ]
 
 
 
@@ -168,7 +250,10 @@ class App extends Component {
         this.setState({ filmPresent })
         console.log({ filmPresent })
     }
-      
+    visibleFilmposter = (visible) => {
+      return  this.setState({  visible: false })
+        console.log(visible)
+    }
     render() {
         let filmPoster = this.state.filmPresent.map((filmPresent) => {
             return (
@@ -180,39 +265,32 @@ class App extends Component {
                     {...filmPresent}
                     //key={filmPresent.id}
                     key={filmPresent.id}
-                   onDel={() => this.onDel(filmPresent.id)}
+                    //onDel={() => this.onDel(filmPresent.id)}
+                    visibleFilmposter={() => this.visibleFilmposter(filmPresent.visible)}
                 />
             )
 
 
         })
-       
+        let quickLink = this.state.quickLink.map((quickLink) => {
+            return ( 
+                <QuickLink
+
+                    {...quickLink}
+                    key={quickLink.id}
+                />
+                )
+        })
         return (
                
             <div>
-            <Header/>
-
+                <Header />
+                
                 <div className='container'>
                     <div style={{ marginTop: '100px' }}>
                         <h2 onClick={this.onPosterClick}>Швидкі посилання:</h2>
                         <div className='d-inline-flex flex-wrap justify-content-center'>
-
-                        <a className="btn btn-secondary my-1 mx-1" href='#' >2017</a  >
-                        <a className="btn btn-secondary my-1 mx-1"  href='#'>2018</a>
-                        <a className="btn btn-secondary my-1 mx-1" href='#' >2019</a>
-                        <a className="btn btn-secondary my-1 mx-1" href='#' >Радянські фільми</a>
-                        <a className="btn btn-secondary my-1 mx-1" href='#' >Американські фільми</a>
-                        <a className="btn btn-secondary my-1 mx-1" href='#' >Зарубіжні фільми</a>
-                        <a className="btn btn-secondary my-1 mx-1" href='#' >Трилери</a>
-                        <a className="btn btn-secondary my-1 mx-1" href='#' >Пригодницькі</a>
-                        <a className="btn btn-secondary my-1 mx-1" href='#' >Кримінальні</a>
-                        <a className="btn btn-secondary my-1 mx-1" href='#' >Жахи</a>
-                        <a className="btn btn-secondary my-1 mx-1" href='#' >Фантастика</a>
-                        <a className="btn btn-secondary my-1 mx-1" href='#' >Історичні</a>
-                        <a className="btn btn-secondary my-1 mx-1" href='#' >Фентезі</a>
-                        <a className="btn btn-secondary my-1 mx-1" href='#' >Містичні</a>
-                        <a className="btn btn-secondary my-1 mx-1" href='#' >Драми</a>
-                        <a className="btn btn-secondary my-1 mx-1" href='#' >Комедії</a>
+                            {quickLink}
                     </div>
                     </div>
                 </div>
@@ -224,7 +302,7 @@ class App extends Component {
                                 <div className='catalog-content-inner'>
                                     <div className='container'>
                                         <ul style={{ padding: '60px' }} className="d-flex justify-content-between">
-
+                                          
 
                                             <CatalogFilter
                                                 name1={this.state.catalogFilter[0].catalogName}
@@ -247,6 +325,7 @@ class App extends Component {
                                                 name1={this.state.catalogFilter[3].catalogName}
                                                 catalogItem={this.state.catalogFilter[3].catalogItem}
                                                 key={this.state.catalogFilter[3].id}
+                                               
 
                                             />
 

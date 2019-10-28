@@ -8,7 +8,7 @@ class Footer extends Component {
             <footer >
 
 
-                <div style={{ paddingTop: '5rem' }} className=' padding_foter d-flex justify-content-around'>
+                <div  style={{ paddingTop: '5rem' }} className=' padding_foter d-flex justify-content-around'>
 
                     <div> <a>Контакти</a> </div>
                      

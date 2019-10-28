@@ -1,12 +1,13 @@
 {
   "ExpandedNodes": [
     "",
+    "\\public",
     "\\src",
     "\\src\\catalog-filter",
     "\\src\\footer",
     "\\src\\header",
-    "\\src\\poster-block"
+    "\\src\\poster-block",
+    "\\src\\quickLink"
   ],
-  "SelectedNode": "\\src\\poster-block\\poster-block.js",
   "PreviewInSolutionExplorer": false
 }
