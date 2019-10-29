@@ -240,16 +240,16 @@ class App extends Component {
     //}
 
 
-    onDel = (id) => {
-        const filmPresent = [...this.state.filmPresent]
-        const ind = filmPresent.findIndex((el) => el.id === id)
-        const newItem = {
-            actor: 'Bon Jovi' 
-        }
-        filmPresent.push(newItem)
-        this.setState({ filmPresent })
-        console.log({ filmPresent })
-    }
+    //onDel = (id) => {
+    //    const filmPresent = [...this.state.filmPresent]
+    //    const ind = filmPresent.findIndex((el) => el.id === id)
+    //    const newItem = {
+    //        actor: 'Bon Jovi' 
+    //    }
+    //    filmPresent.push(newItem)
+    //    this.setState({ filmPresent })
+    //    console.log({ filmPresent })
+    //}
     
     render() {
         let filmPoster = this.state.filmPresent.map((filmPresent) => {

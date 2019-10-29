@@ -12,7 +12,8 @@ class CatalogFilter extends Component {
     render() {
    
         let liItems = this.props.catalogItem.map((some) => {
-            return <li>{some}</li>
+          
+            return <li>{some}</li> 
         })
         let catalogClass = 'liItems'
         if (this.state.display) {
@@ -24,7 +25,7 @@ class CatalogFilter extends Component {
                 <div style={{ border: '1px solid red' }} onClick={this.ShowCatalog}>
                     <span>{this.props.name1}</span>
                 </div>
-                <div  className={catalogClass}>
+                <div className={catalogClass}>
                     <ul>
                         {liItems}
 
