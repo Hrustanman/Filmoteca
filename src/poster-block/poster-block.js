@@ -9,11 +9,11 @@ class PosterBlock extends Component {
         this.setState({ visible: true /* !this.state.visible*/ })
 
     }
-    nonVisibleFilmposter = () => {
+    //nonVisibleFilmposter = () => {
 
-        this.setState({ visible: false /* !this.state.visible*/ })
+    //    this.setState({ visible: false /* !this.state.visible*/ })
 
-    }
+    //}
    
     render() {
         
@@ -30,12 +30,14 @@ class PosterBlock extends Component {
                     <div> <h6>{this.props.name}({this.props.year})</h6></div>
                 </a>
                     </div>
-                    {this.state.visible && <div className = 'col-4'
-                        style={{ zIndex: '10', position: 'absolute', border: '1px solid blue', backgroundColor: 'white', }}>
+                    {this.state.visible && <div className='popupPosterBlock col-4'>
                         <a>
                             <img  src={this.props.image} />
-                        <div> <h6>{this.props.name}</h6></div>
-                    </a>
+                        
+                        </a>
+                        <div> <h6>{this.props.name}</h6>
+                            <h6>{this.props.name}</h6>
+                        </div>
                 </div>}
             </div>
                 </div>

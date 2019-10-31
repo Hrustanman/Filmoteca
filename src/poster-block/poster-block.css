@@ -9,6 +9,16 @@
 .poster_block h6{
     padding-top: 1rem;
 }
-    .poster_block h6:hover {
+   .poster_block h6:hover {
         color: #505891
     }
+.popupPosterBlock {
+    z-index: 10;
+    position: absolute; 
+    border: 1px solid blue;
+    background-color: white;
+    height : 80%;
+    display: flex
+
+
+}
