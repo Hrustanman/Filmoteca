@@ -17,8 +17,11 @@
     position: absolute; 
     border: 1px solid blue;
     background-color: white;
-    height : 80%;
-    display: flex
+    height : 365px;
+    width: 600px;
+    display: flex;
+    justify-content: space-around;
+    padding: 5px
 
 
 }

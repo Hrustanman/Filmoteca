@@ -17,6 +17,7 @@ import Interstellar from './Images/Interstellar.jpg'
 import jungle from './Images/jungle.jpg'
 import sniper from './Images/sniper.jpg'
 import mind from './Images/mind.jpg'
+import garryBig from './Images/garry poter big.jpg'
 import wild from './Images/into the wild.jpg'
 import QuickLink from './quickLink/quickLink';
 import Popup from 'reactjs-popup'
@@ -76,6 +77,7 @@ class App extends Component {
             {
                 id: 7,
                 image: garry,
+                imagePopup: garryBig,
                 name: 'Гарі Потер і філософський камінь',
                 year: 2001,
                 actor: '',

@@ -31,12 +31,15 @@ class PosterBlock extends Component {
                 </a>
                     </div>
                     {this.state.visible && <div className='popupPosterBlock col-4'>
-                        <a>
-                            <img  src={this.props.image} />
-                        
-                        </a>
-                        <div> <h6>{this.props.name}</h6>
+                      
+                            <a >
+                                {/*<img style={{ width: '200px', height: '300px' }} src={this.props.imagePopup} />*/}
+                                <img style={{ width: '60%', height: '90%', boxSizing: 'border-box' }} src={this.props.imagePopup} />
+                            </a> 
+                      
+                        <div>
                             <h6>{this.props.name}</h6>
+                            <h6></h6>
                         </div>
                 </div>}
             </div>
