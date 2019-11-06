@@ -14,14 +14,17 @@
     }
 .popupPosterBlock {
     z-index: 10;
-    position: absolute; 
-    border: 1px solid blue;
-    background-color: white;
-    height : 365px;
+    position: absolute;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    background-color: #f7f7f7;
+    height: 300px;
     width: 600px;
     display: flex;
     justify-content: space-around;
-    padding: 5px
-
-
+    padding: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    font-family: Roboto,Arial,Helvetica,Helvetica Neue,FreeSans,sans-serif;
+    color: #41484d;
 }
