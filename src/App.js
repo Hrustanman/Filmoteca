@@ -31,7 +31,8 @@ class App extends Component {
                 image: rempage,
                 name: 'Ремпейдж',
                 year: 2018,
-                actor: '',
+                actors: '',
+                director: '',
              
             },
             {
@@ -39,7 +40,8 @@ class App extends Component {
                 image: slown,
                 name: 'Cлоун',
                 year: 2018,
-                actor: '',
+                actors: '',
+                director: '',
                
             },
             {
@@ -47,89 +49,89 @@ class App extends Component {
                 image: unknow,
                 name: 'Невідомий',
                 year: 2011,
-                actor: '',
-              
+                actors: '',
+                director: '',
             },
             {
                 id: 4,
                 image: zodiac,
                 name: 'Зодіак',
                 year: 2007,
-                actor: '',
-               
+                actors: '',
+                director: '',
             },
             {
                 id: 5,
                 image: citizen,
                 name: 'Законослухляний громадянин',
                 year: 2009,
-                actor: '',
-                
+                actors: '',
+                director: '',
             },
             {
                 id: 6,
                 image: atlantis,
                 name: 'Атлантида',
                 year: 2017,
-                actor: '',
-                
+                actors: '',
+                director: '',
             },
             {
                 id: 7,
                 image: garry,
                 imagePopup: garryBig,
                 name: 'Гарі Потер і філософський камінь',
-                year: 2001,
-                actor: '',
-          
+                year: 2002,
+                actors: 'Деніел Редкліфф, Руперт Грінт, Емма Вотсон',
+                director: 'Кріс Коламбус',
             },
             {
                 id: 8,
                 image: Apocalypto,
                 name: 'Апокаліпсис',
                 year: 2006,
-                actor: '',
-              
+                actors: '',
+                director: '',
             },
             {
                 id: 9,
                 image: Interstellar,
                 name: 'Інтерстеллар',
                 year: 2014,
-                actor: ''
-               
+                actors: '',
+                director: '',
             },
             {
                 id: 10,
                 image: jungle,
                 name: 'Джунглі',
                 year: 2017,
-                actor: '',
-               
+                actors: '',
+                director: '',
             },
             {
                 id: 11,
                 image: sniper,
                 name: 'Снайпер',
                 year: 2014,
-                actor: '',
-                
+                actors: '',
+                director: '',
             },
             {
                 id: 12,
                 image: mind,
                 name: 'Ігри розуму',
                 year: 2001,
-                actor: '',
-                
+                actors: '',
+                director: '',
             },
             {
                 id: 13,                                                      
                 image: wild,
                 name: 'В диких умовах',
                 year: 2007,
-                actor: '',
-               
+                actors: '',
+                director: '',
             }
 
 

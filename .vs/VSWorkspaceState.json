@@ -6,10 +6,9 @@
     "\\src\\catalog-filter",
     "\\src\\footer",
     "\\src\\header",
-    "\\src\\Images",
     "\\src\\poster-block",
     "\\src\\quickLink"
   ],
-  "SelectedNode": "\\src\\Images\\sniper.jpg",
+  "SelectedNode": "\\src\\poster-block\\poster-block.js",
   "PreviewInSolutionExplorer": false
 }

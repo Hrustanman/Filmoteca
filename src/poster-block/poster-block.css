@@ -28,3 +28,7 @@
     font-family: Roboto,Arial,Helvetica,Helvetica Neue,FreeSans,sans-serif;
     color: #41484d;
 }
+.popupPosterBlock p{
+    margin-left: 5px;
+    font-size: 14px;
+}

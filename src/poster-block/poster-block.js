@@ -36,9 +36,12 @@ class PosterBlock extends Component {
                                 <img style={{ width: '100%', height: '100%'}} src={this.props.imagePopup} />
                             </a>
                         </div>
-                        <div style={{ width: '60%', maxWidth: '60%' }}>
-                            <p>{this.props.name}</p>
-                            <p>FGDF</p>
+                        <div style={{ width: '60%', maxWidth: '60%', textAlign: 'left' }}>
+                            <p> Назва: {this.props.name}</p>
+                            <p>Рік: {this.props.year}</p>
+                            <p>Жанр:</p>
+                            <p>Режисер:{this.props.director}</p>
+                            <p>Актори: {this.props.actors}</p>
                         </div>
                 </div>}
             </div>
