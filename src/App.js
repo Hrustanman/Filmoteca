@@ -20,6 +20,7 @@ import mind from './Images/mind.jpg'
 import garryBig from './Images/garry poter big.jpg'
 import wild from './Images/into the wild.jpg'
 import QuickLink from './quickLink/quickLink';
+import rempageBig from './Images/rempageBig.jpg'
 import Popup from 'reactjs-popup'
 
 
@@ -29,6 +30,7 @@ class App extends Component {
             {
                 id: 1,
                 image: rempage,
+                imagePopup: rempageBig,
                 name: 'Ремпейдж',
                 year: 2018,
                 actors: '',
@@ -84,6 +86,7 @@ class App extends Component {
                 year: 2002,
                 actors: 'Деніел Редкліфф, Руперт Грінт, Емма Вотсон',
                 director: 'Кріс Коламбус',
+                genre: 'Фентезі',
             },
             {
                 id: 8,
@@ -289,7 +292,7 @@ class App extends Component {
                 
                 <div className='container'>
                     <div style={{ marginTop: '100px' }}>
-                        <h2 onClick={this.onPosterClick}>Швидкі посилання:</h2>
+                     
                         <div className='d-inline-flex flex-wrap justify-content-center'>
                             {quickLink}
                     </div>
