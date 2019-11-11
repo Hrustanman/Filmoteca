@@ -20,7 +20,18 @@ import mind from './Images/mind.jpg'
 import garryBig from './Images/garry poter big.jpg'
 import wild from './Images/into the wild.jpg'
 import QuickLink from './quickLink/quickLink';
-import rempageBig from './Images/rempageBig.jpg'
+import rempageBig from './Images/rempegeBig.jpg'
+import slownBig from './Images/slownBig.jfif'
+import unknownBig from './Images/unknownBig.jfif'
+import zodiacBig from './Images/zodiacBig.jfif'
+import cityzenBig from './Images/cityzenBig.jfif'
+import atlantysBig from './Images/atlantysBig.jfif'
+import apocalyptoBig from './Images/apocalyptoBig.jfif'
+import interstellarBig from './Images/interstellarBig.jfif'
+import jungleBig from './Images/jungleBig.jfif'
+import sniperBig from './Images/sniperBig.jfif'
+import mindBig from './Images/mindBig.jfif'
+import wildBig from './Images/wildBig.jfif'
 import Popup from 'reactjs-popup'
 
 
@@ -33,50 +44,61 @@ class App extends Component {
                 imagePopup: rempageBig,
                 name: 'Ремпейдж',
                 year: 2018,
-                actors: '',
-                director: '',
+                actors: 'Двейн Джонсон,Наомі Гарріс,Малін Акерман',
+                director: 'Бред Пейто',
+                genre: 'бойовик'
              
             },
             {
                 id: 2,
                 image: slown,
+                imagePopup: slownBig,
                 name: 'Cлоун',
                 year: 2018,
-                actors: '',
-                director: '',
+                actors: 'Джесіка Честейн, Марк Стронг, Гугу Мбата-Роу',
+                director: 'Джонн Медден',
+                genre:'драма'
                
             },
             {
                 id: 3,
                 image: unknow,
+                imagePopup:unknownBig,
                 name: 'Невідомий',
                 year: 2011,
-                actors: '',
-                director: '',
+                actors: 'Леонард Голдберг, Джоел Сілвер, Ендрю Рона',
+                director: '	Хауме Кольєт-Серра',
+                genre:'трилер'
             },
             {
                 id: 4,
                 image: zodiac,
+                imagePopup: zodiacBig,
                 name: 'Зодіак',
                 year: 2007,
-                actors: '',
-                director: '',
+                actors: 'Джейк Джилленгол, Марк Руффало, Роберт Дауні',
+                director: 'Девід Фінчер',
+                genre:'	трилер'
             },
             {
                 id: 5,
                 image: citizen,
+                imagePopup: cityzenBig,
                 name: 'Законослухляний громадянин',
                 year: 2009,
-                actors: '',
-                director: '',
+                actors: 'Джерард Батлер,Курт Віммер,Лукас Фостер',
+                director: 'Фелікс Гері Грей',
+                genre:'трилер'
             },
             {
                 id: 6,
                 image: atlantis,
+                imagePopup: atlantysBig,
                 name: 'Атлантида',
                 year: 2017,
-                actors: '',
-                director: '',
+                actors: 'Рей Стівенсон, Девід Оукс,Аура Гаррідо',
+                director: 'Ксавьє Жанс',
+                genre:'фантастика'
             },
             {
                 id: 7,
@@ -91,50 +113,62 @@ class App extends Component {
             {
                 id: 8,
                 image: Apocalypto,
+                imagePopup: apocalyptoBig,
                 name: 'Апокаліпсис',
                 year: 2006,
-                actors: '',
-                director: '',
+                actors: 'Руді Янблад, Далія Ернандез',
+                director: 'Мел Гібсон',
+                genre:'	трилер'
             },
             {
                 id: 9,
                 image: Interstellar,
+                imagePopup: interstellarBig,
                 name: 'Інтерстеллар',
                 year: 2014,
-                actors: '',
-                director: '',
+                actors: 'Меттью Макконехі, Енн Гетевей, Джессіка Честейн',
+                director: 'Крістофер Нолан',
+                genre:'фантастика'
             },
             {
                 id: 10,
                 image: jungle,
+                imagePopup: jungleBig,
                 name: 'Джунглі',
                 year: 2017,
-                actors: '',
-                director: '',
+                actors: 'Деніел Редкліфф, Алекс Рассел, Томас Кречманн',
+                director: '	Грег Маклін',
+                genre:'пригодницький'
             },
             {
                 id: 11,
                 image: sniper,
+                imagePopup: sniperBig,
                 name: 'Снайпер',
                 year: 2014,
-                actors: '',
-                director: '',
+                actors: 'Бредлі Купер, Сієна Міллер, Макс Чарльз',
+                director: 'Клінт Іствуд',
+                genre:'біографія'
             },
             {
                 id: 12,
                 image: mind,
+                imagePopup: mindBig,
                 name: 'Ігри розуму',
                 year: 2001,
-                actors: '',
-                director: '',
+                actors: 'Рассел Кроу, Ед Гарріс, Дженніфер Коннеллі',
+                director: 'Рон Говард',
+                genre:'драма'
             },
             {
                 id: 13,                                                      
                 image: wild,
+                imagePopup:wildBig,
                 name: 'В диких умовах',
                 year: 2007,
-                actors: '',
-                director: '',
+                actors: 'Еміль Гірш, Марсія Гей Гарден, Вільям Герт,',
+                director: 'Шон Пенн',
+                genre:'пригодницький'
             }
 
 
