@@ -266,7 +266,8 @@ class App extends Component {
                 quickLinkName: 'Комедії',
                 id: 12
             },
-        ]
+        ],
+        val :''
 
 
 
@@ -291,7 +292,11 @@ class App extends Component {
     //    this.setState({ filmPresent })
     //    console.log({ filmPresent })
     //}
-    
+    onLabelChange = (e) => {
+        this.setState({ val: e.target.value })
+  
+    }
+
     render() {
         let filmPoster = this.state.filmPresent.map((filmPresent) => {
             return (
@@ -322,7 +327,9 @@ class App extends Component {
         return (
                
             <div>
-                <Header />
+                <Header
+                    onLabelChange={this.onLabelChange}
+                />
                 
                 <div className='container'>
                     <div style={{ marginTop: '100px' }}>
@@ -334,7 +341,7 @@ class App extends Component {
                 </div>
                
                 <div className=' container' style={{ marginTop:  '30px'}}>
-                    <div className='jumbotron border rounded'>
+                    <div className='jumbotron'>
                         <div className = 'content_body'>
                             <div>
                                 <div className='catalog-content-inner'>

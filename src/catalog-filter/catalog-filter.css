@@ -14,6 +14,16 @@
 .liItems ul {
     padding: 5px;
 }
-    .liItems ul li {
+ .liItems ul li {
         text-align: center
+    }
+.titleFiltr {
+    color:rgba(255,255,255,.6);
+    border: 1px solid #08202e;
+    padding: 5px;
+    border-radius: 4px;
+    transition: 1s;
+}
+    .titleFiltr:hover {
+        background-color: #08202e
     }

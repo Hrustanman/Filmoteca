@@ -9,11 +9,11 @@ class PosterBlock extends Component {
         this.setState({ visible: true /* !this.state.visible*/ })
 
     }
-    //nonVisibleFilmposter = () => {
+    nonVisibleFilmposter = () => {
 
-    //    this.setState({ visible: false /* !this.state.visible*/ })
+        this.setState({ visible: false /* !this.state.visible*/ })
 
-    //}
+    }
    
     render() {
         

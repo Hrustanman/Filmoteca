@@ -9,6 +9,7 @@ class CatalogFilter extends Component {
             this.setState({ display: !this.state.display })
         
     }
+   
     render() {
    
         let liItems = this.props.catalogItem.map((some) => {
@@ -22,13 +23,12 @@ class CatalogFilter extends Component {
         return (
 
             <div >
-                <div style={{ border: '1px solid red' }} onClick={this.ShowCatalog}>
+                <div className = 'titleFiltr'  onClick={this.ShowCatalog}>
                     <span>{this.props.name1}</span>
                 </div>
                 <div className={catalogClass}>
                     <ul>
                         {liItems}
-
                     </ul>
                 </div>
             </div>

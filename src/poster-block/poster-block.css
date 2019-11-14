@@ -15,8 +15,7 @@
 .popupPosterBlock {
     z-index: 10;
     position: absolute;
-    border: 1px solid #ddd;
-    border-radius: 3px;
+    border-radius: 4px;
     background-color: #08202e;
     height: 300px;
     width: 600px;
