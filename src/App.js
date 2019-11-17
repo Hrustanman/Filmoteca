@@ -379,6 +379,7 @@ class App extends Component {
                     quickLinkChange={() => this.quickLinkChange}
                     {...quickLink}
                     key={quickLink.id}
+                    
                 />
             )
         })
@@ -435,6 +436,7 @@ class App extends Component {
                                         </ul>
                                     </div>
                                     <div className='d-inline-flex flex-wrap justify-content-center'>
+
                                         {filmPoster}
                                     </div>
                                     <div>
