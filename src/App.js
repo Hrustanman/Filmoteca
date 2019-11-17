@@ -43,7 +43,7 @@ class App extends Component {
                 image: rempage,
                 imagePopup: rempageBig,
                 name: 'Ремпейдж',
-                year: 2018,
+                year: '2018',
                 actors: 'Двейн Джонсон,Наомі Гарріс,Малін Акерман',
                 director: 'Бред Пейто',
                 genre: 'бойовик'
@@ -54,7 +54,7 @@ class App extends Component {
                 image: slown,
                 imagePopup: slownBig,
                 name: 'Cлоун',
-                year: 2018,
+                year: '2018',
                 actors: 'Джесіка Честейн, Марк Стронг, Гугу Мбата-Роу',
                 director: 'Джонн Медден',
                 genre:'драма'
@@ -65,7 +65,7 @@ class App extends Component {
                 image: unknow,
                 imagePopup:unknownBig,
                 name: 'Невідомий',
-                year: 2011,
+                year: '2011',
                 actors: 'Леонард Голдберг, Джоел Сілвер, Ендрю Рона',
                 director: '	Хауме Кольєт-Серра',
                 genre:'трилер'
@@ -75,7 +75,7 @@ class App extends Component {
                 image: zodiac,
                 imagePopup: zodiacBig,
                 name: 'Зодіак',
-                year: 2007,
+                year: '2007',
                 actors: 'Джейк Джилленгол, Марк Руффало, Роберт Дауні',
                 director: 'Девід Фінчер',
                 genre:'	трилер'
@@ -85,17 +85,17 @@ class App extends Component {
                 image: citizen,
                 imagePopup: cityzenBig,
                 name: 'Законослухляний громадянин',
-                year: 2009,
+                year: '2009',
                 actors: 'Джерард Батлер,Курт Віммер,Лукас Фостер',
                 director: 'Фелікс Гері Грей',
-                genre:'трилер'
+                genre:'Трилер'
             },
             {
                 id: 6,
                 image: atlantis,
                 imagePopup: atlantysBig,
                 name: 'Атлантида',
-                year: 2017,
+                year: '2017',
                 actors: 'Рей Стівенсон, Девід Оукс,Аура Гаррідо',
                 director: 'Ксавьє Жанс',
                 genre:'фантастика'
@@ -105,7 +105,7 @@ class App extends Component {
                 image: garry,
                 imagePopup: garryBig,
                 name: 'Гарі Потер і філософський камінь',
-                year: 2002,
+                year: '2002',
                 actors: 'Деніел Редкліфф, Руперт Грінт, Емма Вотсон',
                 director: 'Кріс Коламбус',
                 genre: 'Фентезі',
@@ -115,17 +115,17 @@ class App extends Component {
                 image: Apocalypto,
                 imagePopup: apocalyptoBig,
                 name: 'Апокаліпсис',
-                year: 2006,
+                year: '2006',
                 actors: 'Руді Янблад, Далія Ернандез',
                 director: 'Мел Гібсон',
-                genre:'	трилер'
+                genre:'Трилер'
             },
             {
                 id: 9,
                 image: Interstellar,
                 imagePopup: interstellarBig,
                 name: 'Інтерстеллар',
-                year: 2014,
+                year: '2014',
                 actors: 'Меттью Макконехі, Енн Гетевей, Джессіка Честейн',
                 director: 'Крістофер Нолан',
                 genre:'фантастика'
@@ -135,7 +135,7 @@ class App extends Component {
                 image: jungle,
                 imagePopup: jungleBig,
                 name: 'Джунглі',
-                year: 2017,
+                year: '2017',
                 actors: 'Деніел Редкліфф, Алекс Рассел, Томас Кречманн',
                 director: '	Грег Маклін',
                 genre:'пригодницький'
@@ -145,7 +145,7 @@ class App extends Component {
                 image: sniper,
                 imagePopup: sniperBig,
                 name: 'Снайпер',
-                year: 2014,
+                year: '2014',
                 actors: 'Бредлі Купер, Сієна Міллер, Макс Чарльз',
                 director: 'Клінт Іствуд',
                 genre:'біографія'
@@ -155,7 +155,7 @@ class App extends Component {
                 image: mind,
                 imagePopup: mindBig,
                 name: 'Ігри розуму',
-                year: 2001,
+                year: '2001',
                 actors: 'Рассел Кроу, Ед Гарріс, Дженніфер Коннеллі',
                 director: 'Рон Говард',
                 genre:'драма'
@@ -165,7 +165,7 @@ class App extends Component {
                 image: wild,
                 imagePopup:wildBig,
                 name: 'В диких умовах',
-                year: 2007,
+                year: '2007',
                 actors: 'Еміль Гірш, Марсія Гей Гарден, Вільям Герт,',
                 director: 'Шон Пенн',
                 genre:'пригодницький'
@@ -227,7 +227,7 @@ class App extends Component {
                 id: 6
              },
             {
-                quickLinkName: 'Трилери',
+                quickLinkName: 'Рассел Кроу',
                 id: 7
              },
             {
@@ -248,26 +248,27 @@ class App extends Component {
              },
             {
                 quickLinkName: 'Історичні',
-                id: 12
+                id: 13
             },
             {
                 quickLinkName: 'Фентезі',
-                id: 12
+                id: 14
             },
             {
                 quickLinkName: 'Містичні',
-                id: 12
+                id: 15
             },
             {
-                quickLinkName: 'Драми',
-                id: 12
+                quickLinkName: 'Драма',
+                id: 16
             },
             {
                 quickLinkName: 'Комедії',
-                id: 12
+                id: 17
             },
         ],
-        val :''
+      
+        tern: '',
 
 
 
@@ -293,21 +294,64 @@ class App extends Component {
     //    console.log({ filmPresent })
     //}
     onLabelChange = (e) => {
-        this.setState({ val: e.target.value })
-  
+        e.preventDefault()
+        this.setState({ tern: e.target.value })
+}
+    onSubmit = (e) => {
+        e.preventDefault()
+        this.setState({
+            tern: ''
+        })
+    }
+   
+    search = (item,tern)=> {
+        console.log(this.state.tern.length)
+        if (tern.length === 0) {
+            return item
+        }
+        return item.filter((it) => {
+            var lowerCaseTern = tern.toLowerCase();
+            var a = it.director.toLowerCase().indexOf(lowerCaseTern);
+            if (it.year.toLowerCase().indexOf(tern) > -1) {
+                return true;
+            }
+            if (it.actors.toLowerCase().indexOf(lowerCaseTern) > -1) {
+                return true;
+            }
+            if (it.director.toLowerCase().indexOf(lowerCaseTern) > -1) {
+                return true;
+            }
+            if (it.name.toLowerCase().indexOf(lowerCaseTern) > -1) {
+                return true;
+            }
+            if (it.genre.toLowerCase().indexOf(lowerCaseTern) > -1) {
+                return true;
+            }
+            
+        })
+    }
+    
+    quickLinkChange = (quikLink) => {
+        console.log(this.state.tern)
+        this.setState({ tern: quikLink.toLowerCase() })
+        console.log(this.state.tern)
+      
     }
 
     render() {
-        let filmPoster = this.state.filmPresent.map((filmPresent) => {
+        let visiblePoster = this.search(this.state.filmPresent, this.state.tern)
+
+        let filmPoster = visiblePoster.map((visiblePoster) => {
             return (
                 <PosterBlock
 
-                    //name={filmPresent.name}
+                    //name={filmPresent.name}                       visible прогнати через map
                     //image={filmPresent.image}
                     //year={filmPresent.year}
-                    {...filmPresent}
+                    //{...visiblePoster}
+                    key={visiblePoster.id}
+                    {...visiblePoster}
                     //key={filmPresent.id}
-                    key={filmPresent.id}
                     //onDel={() => this.onDel(filmPresent.id)}
                   
                 />
@@ -318,17 +362,24 @@ class App extends Component {
         let quickLink = this.state.quickLink.map((quickLink) => {
             return ( 
                 <QuickLink
-
+                   
+                    quickLinkChange={() => this.quickLinkChange}
                     {...quickLink}
                     key={quickLink.id}
+                    
                 />
+
                 )
         })
+        
+      
         return (
                
             <div>
                 <Header
                     onLabelChange={this.onLabelChange}
+                    onSubmit={this.onSubmit}
+                    value={this.state.tern}
                 />
                 
                 <div className='container'>
@@ -374,12 +425,14 @@ class App extends Component {
 
                                             />
 
-
+                                            
                                         </ul>
                                     </div>
                                     <div className='d-inline-flex flex-wrap justify-content-center'>
+
                                         {filmPoster}
 
+                                       
                                     </div>
                                     <div>
 
@@ -391,6 +444,7 @@ class App extends Component {
                         </div>
                     </div>
                 </div>
+              
                 <nav>
                     <ul className="pagination justify-content-center">
                         <li className="page-item disabled">

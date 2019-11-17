@@ -79,8 +79,15 @@ const Header = (props) => {
                             </div>
                         </li>
                     </ul>
-                    <form className="form-inline my-2 my-lg-0">
-                        <input onChange={props.onLabelChange} className="form-control mr-sm-2" type="search" placeholder="Пошук" aria-label="Search" />
+                    <form className="form-inline my-2 my-lg-0"
+                        onSubmit={props.onSubmit}
+                    >
+                        <input
+                         onChange={props.onLabelChange}
+                         value={props.value}
+
+                            className="form-control mr-sm-2" type="search"
+                            placeholder="Пошук" aria-label="Search" />
                         <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Пошук</button>
                         
                     </form>
