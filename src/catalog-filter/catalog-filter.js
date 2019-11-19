@@ -13,8 +13,8 @@ class CatalogFilter extends Component {
     render() {
    
         let liItems = this.props.catalogItem.map((some) => {
-          
-            return <li>{some}</li> 
+
+            return <li onClick={() => this.props.quickLinkChange()(some)}>{some}</li> 
         })
         let catalogClass = 'liItems'
         if (this.state.display) {
@@ -23,11 +23,12 @@ class CatalogFilter extends Component {
         return (
 
             <div >
-                <div className = 'titleFiltr'  onClick={this.ShowCatalog}>
-                    <span>{this.props.name1}</span>
-                </div>
+               
+                <div  className='titleFiltr' onClick={this.ShowCatalog}>
+                    <span >{this.props.name1}</span>
+                </div >
                 <div className={catalogClass}>
-                    <ul>
+                    <ul  >
                         {liItems}
                     </ul>
                 </div>

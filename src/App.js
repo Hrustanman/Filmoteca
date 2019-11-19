@@ -36,6 +36,7 @@ import Popup from 'reactjs-popup'
 
 
 class App extends Component {
+
     state = {
         filmPresent: [
             {
@@ -46,29 +47,32 @@ class App extends Component {
                 year: '2018',
                 actors: 'Двейн Джонсон,Наомі Гарріс,Малін Акерман',
                 director: 'Бред Пейто',
-                genre: 'бойовик'
-             
+                genre: 'бойовик',
+                country: 'США'
+
             },
             {
                 id: 2,
                 image: slown,
                 imagePopup: slownBig,
-                name: 'Cлоун',
+                name: 'Слоун',
                 year: '2018',
                 actors: 'Джесіка Честейн, Марк Стронг, Гугу Мбата-Роу',
                 director: 'Джонн Медден',
-                genre:'драма'
-               
+                genre: 'драма',
+                country: 'США,Франція'
+
             },
             {
                 id: 3,
                 image: unknow,
-                imagePopup:unknownBig,
+                imagePopup: unknownBig,
                 name: 'Невідомий',
                 year: '2011',
                 actors: 'Леонард Голдберг, Джоел Сілвер, Ендрю Рона',
                 director: '	Хауме Кольєт-Серра',
-                genre:'трилер'
+                genre: 'трилер',
+                country: 'США, Німеччина'
             },
             {
                 id: 4,
@@ -78,7 +82,8 @@ class App extends Component {
                 year: '2007',
                 actors: 'Джейк Джилленгол, Марк Руффало, Роберт Дауні',
                 director: 'Девід Фінчер',
-                genre:'	трилер'
+                genre: '	трилер',
+                country: 'США'
             },
             {
                 id: 5,
@@ -88,7 +93,8 @@ class App extends Component {
                 year: '2009',
                 actors: 'Джерард Батлер,Курт Віммер,Лукас Фостер',
                 director: 'Фелікс Гері Грей',
-                genre:'Трилер'
+                genre: 'Трилер',
+                country: 'США'
             },
             {
                 id: 6,
@@ -98,17 +104,20 @@ class App extends Component {
                 year: '2017',
                 actors: 'Рей Стівенсон, Девід Оукс,Аура Гаррідо',
                 director: 'Ксавьє Жанс',
-                genre:'фантастика'
+                genre: 'фантастика',
+                country: 'Іспанія, Франція',
+
             },
             {
                 id: 7,
                 image: garry,
                 imagePopup: garryBig,
-                name: 'Гарі Потер і філософський камінь',
+                name: 'Гаррі Потер і філософський камінь',
                 year: '2002',
                 actors: 'Деніел Редкліфф, Руперт Грінт, Емма Вотсон',
                 director: 'Кріс Коламбус',
                 genre: 'Фентезі',
+                country: 'США, Велика Британія'
             },
             {
                 id: 8,
@@ -118,7 +127,8 @@ class App extends Component {
                 year: '2006',
                 actors: 'Руді Янблад, Далія Ернандез',
                 director: 'Мел Гібсон',
-                genre:'Трилер'
+                genre: 'Трилер',
+                country: 'США'
             },
             {
                 id: 9,
@@ -128,7 +138,8 @@ class App extends Component {
                 year: '2014',
                 actors: 'Меттью Макконехі, Енн Гетевей, Джессіка Честейн',
                 director: 'Крістофер Нолан',
-                genre:'фантастика'
+                genre: 'фантастика',
+                country: 'США, Велика Британія'
             },
             {
                 id: 10,
@@ -138,7 +149,8 @@ class App extends Component {
                 year: '2017',
                 actors: 'Деніел Редкліфф, Алекс Рассел, Томас Кречманн',
                 director: '	Грег Маклін',
-                genre:'пригодницький'
+                genre: 'пригодницький',
+                country: 'Колумбія, Австралія'
             },
             {
                 id: 11,
@@ -148,7 +160,8 @@ class App extends Component {
                 year: '2014',
                 actors: 'Бредлі Купер, Сієна Міллер, Макс Чарльз',
                 director: 'Клінт Іствуд',
-                genre:'біографія'
+                genre: 'біографія',
+                country: 'США'
             },
             {
                 id: 12,
@@ -158,17 +171,19 @@ class App extends Component {
                 year: '2001',
                 actors: 'Рассел Кроу, Ед Гарріс, Дженніфер Коннеллі',
                 director: 'Рон Говард',
-                genre:'драма'
+                genre: 'драма',
+                country: 'США'
             },
             {
-                id: 13,                                                      
+                id: 13,
                 image: wild,
-                imagePopup:wildBig,
+                imagePopup: wildBig,
                 name: 'В диких умовах',
                 year: '2007',
                 actors: 'Еміль Гірш, Марсія Гей Гарден, Вільям Герт,',
                 director: 'Шон Пенн',
-                genre:'пригодницький'
+                genre: 'пригодницький',
+                country: 'США'
             }
 
 
@@ -186,8 +201,9 @@ class App extends Component {
             },
             {
                 catalogName: 'Всі роки',
-                catalogItem: [2019, 2018, 2017, 2016, '2010-2019', '2000-2010', '1990-2000', '1980-1990'],
-                id: 2
+                catalogItem: ['2019', '2018', '2017', '2016', '2010-2017', '2000-2010', '1990-2000', '1980-1990'],
+                id: 2,
+
             },
             {
                 catalogName: 'Всі країни',
@@ -205,47 +221,47 @@ class App extends Component {
             {
                 quickLinkName: '2017',
                 id: 1
-             },
+            },
             {
                 quickLinkName: '2018',
                 id: 2
-             },
+            },
             {
                 quickLinkName: '2019',
                 id: 3
-             },
+            },
             {
                 quickLinkName: 'Радянські фільми',
                 id: 4
-             },
+            },
             {
                 quickLinkName: 'Американські фільми',
                 id: 5
-             },
+            },
             {
                 quickLinkName: 'Зарубіжні фільми',
                 id: 6
-             },
+            },
             {
                 quickLinkName: 'Рассел Кроу',
                 id: 7
-             },
+            },
             {
                 quickLinkName: 'Пригодницькі',
                 id: 8
-             },
+            },
             {
                 quickLinkName: 'Кримінальні',
                 id: 9
-             },
+            },
             {
                 quickLinkName: 'Жахи',
                 id: 10
-             },
+            },
             {
                 quickLinkName: 'Фантастика',
                 id: 11
-             },
+            },
             {
                 quickLinkName: 'Історичні',
                 id: 13
@@ -267,11 +283,8 @@ class App extends Component {
                 id: 17
             },
         ],
-      
         tern: '',
-
-
-
+        visiblePoster: [],
     }
 
     //onDel = (id) => {
@@ -293,25 +306,30 @@ class App extends Component {
     //    this.setState({ filmPresent })
     //    console.log({ filmPresent })
     //}
+
     onLabelChange = (e) => {
-        e.preventDefault()
         this.setState({ tern: e.target.value })
-}
+    }
+
     onSubmit = (e) => {
         e.preventDefault()
         this.setState({
             tern: ''
         })
     }
-   
-    search = (item,tern)=> {
-        console.log(this.state.tern.length)
+    Clicker = () => {
+        let ar = this.search(this.state.filmPresent, this.state.tern)
+        this.setState({ visiblePoster: ar })
+        console.log()
+    }
+
+    search = (item, tern) => {
         if (tern.length === 0) {
             return item
         }
         return item.filter((it) => {
-            var lowerCaseTern = tern.toLowerCase();
-            var a = it.director.toLowerCase().indexOf(lowerCaseTern);
+            let lowerCaseTern = tern.toLowerCase();
+
             if (it.year.toLowerCase().indexOf(tern) > -1) {
                 return true;
             }
@@ -327,124 +345,106 @@ class App extends Component {
             if (it.genre.toLowerCase().indexOf(lowerCaseTern) > -1) {
                 return true;
             }
-            
+            if (it.country.toLowerCase().indexOf(lowerCaseTern) > -1) {
+                return true;
+            }
         })
     }
-    
+
     quickLinkChange = (quikLink) => {
         console.log(this.state.tern)
-        this.setState({ tern: quikLink.toLowerCase() })
+        this.setState({ tern: quikLink })
         console.log(this.state.tern)
-      
     }
 
     render() {
-        let visiblePoster = this.search(this.state.filmPresent, this.state.tern)
-
-        let filmPoster = visiblePoster.map((visiblePoster) => {
+        let filmPoster = this.state.visiblePoster.map((visiblePoster) => {
             return (
                 <PosterBlock
-
-                    //name={filmPresent.name}                       visible прогнати через map
+                    //name={filmPresent.name}                    
                     //image={filmPresent.image}
                     //year={filmPresent.year}
                     //{...visiblePoster}
                     key={visiblePoster.id}
                     {...visiblePoster}
-                    //key={filmPresent.id}
-                    //onDel={() => this.onDel(filmPresent.id)}
-                  
+                //key={filmPresent.id}
+                //onDel={() => this.onDel(filmPresent.id)}
                 />
             )
 
-
         })
         let quickLink = this.state.quickLink.map((quickLink) => {
-            return ( 
+            return (
                 <QuickLink
-                   
                     quickLinkChange={() => this.quickLinkChange}
                     {...quickLink}
                     key={quickLink.id}
-                    
                 />
-
-                )
+            )
         })
-        
-      
+
         return (
-               
             <div>
                 <Header
                     onLabelChange={this.onLabelChange}
                     onSubmit={this.onSubmit}
                     value={this.state.tern}
+                    Clicker={this.Clicker}
                 />
-                
+
                 <div className='container'>
                     <div style={{ marginTop: '100px' }}>
-                     
+
                         <div className='d-inline-flex flex-wrap justify-content-center'>
                             {quickLink}
-                    </div>
+                        </div>
                     </div>
                 </div>
-               
-                <div className=' container' style={{ marginTop:  '30px'}}>
+
+                <div className=' container' style={{ marginTop: '30px' }}>
                     <div className='jumbotron'>
-                        <div className = 'content_body'>
+                        <div className='content_body'>
                             <div>
                                 <div className='catalog-content-inner'>
                                     <div className='container'>
                                         <ul style={{ padding: '60px' }} className="d-flex justify-content-between">
-                                          
-
                                             <CatalogFilter
                                                 name1={this.state.catalogFilter[0].catalogName}
                                                 catalogItem={this.state.catalogFilter[0].catalogItem}
                                                 key={this.state.catalogFilter[0].id}
-
-
+                                                quickLinkChange={() => this.quickLinkChange}
                                             />
                                             <CatalogFilter
                                                 name1={this.state.catalogFilter[1].catalogName}
                                                 catalogItem={this.state.catalogFilter[1].catalogItem}
                                                 key={this.state.catalogFilter[1].id}
+                                                quickLinkChange={() => this.quickLinkChange}
                                             />
                                             <CatalogFilter
                                                 name1={this.state.catalogFilter[2].catalogName}
                                                 catalogItem={this.state.catalogFilter[2].catalogItem}
                                                 key={this.state.catalogFilter[2].id}
+                                                quickLinkChange={() => this.quickLinkChange}
                                             />
                                             <CatalogFilter
                                                 name1={this.state.catalogFilter[3].catalogName}
                                                 catalogItem={this.state.catalogFilter[3].catalogItem}
                                                 key={this.state.catalogFilter[3].id}
-                                               
-
+                                                quickLinkChange={() => this.quickLinkChange}
                                             />
-
-                                            
                                         </ul>
                                     </div>
                                     <div className='d-inline-flex flex-wrap justify-content-center'>
-
                                         {filmPoster}
-
-                                       
                                     </div>
                                     <div>
-
                                     </div>
-
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
-              
+
                 <nav>
                     <ul className="pagination justify-content-center">
                         <li className="page-item disabled">
@@ -456,18 +456,14 @@ class App extends Component {
                         <li className="page-item"><a className="page-link" href="#">4</a></li>
                         <li className="page-item"><a className="page-link" href="#">5</a></li>
                         <li className="page-item">
-                        <a className="page-link" href="#">Next</a>
+                            <a className="page-link" href="#">Next</a>
                         </li>
                     </ul>
                 </nav>
                 <Footer />
             </div>
-            )
-
+        )
     }
-
-
-   
 }
 
 export default App;

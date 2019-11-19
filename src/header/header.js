@@ -1,6 +1,7 @@
 import React from 'react'
 import './header.css'
 const Header = (props) => {
+    
     return (
         <header className=''>
             <nav className="navbar navbar-expand-lg navbar-light /*bg-light*/ fixed-top text-white">
@@ -42,8 +43,6 @@ const Header = (props) => {
                                 <a className="dropdown-item" href="#">Трилери</a>
                                 <a className="dropdown-item" href="#">Мелодрами</a>
                                 <a className="dropdown-item" href="#">Пригоди</a>
-
-
                             </div>
                         </li>
                             <li className="nav-item dropdown">
@@ -80,16 +79,17 @@ const Header = (props) => {
                         </li>
                     </ul>
                     <form className="form-inline my-2 my-lg-0"
-                        onSubmit={props.onSubmit}
                     >
                         <input
-                         onChange={props.onLabelChange}
-                         value={props.value}
-
-                            className="form-control mr-sm-2" type="search"
+                            onChange={props.onLabelChange}
+                            //value={props.value}
+                            onSubmit={props.onSubmit}
+                            className="form-control mr-sm-2" type="text"
                             placeholder="Пошук" aria-label="Search" />
-                        <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Пошук</button>
-                        
+                        <button
+                          onClick={props.Clicker}
+                            className="btn btn-outline-success my-2 my-sm-0" type="submit">Пошук</button>
+                      
                     </form>
                 </div>
 
