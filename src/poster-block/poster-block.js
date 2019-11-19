@@ -14,7 +14,7 @@ class PosterBlock extends Component {
         this.setState({ visible: false /* !this.state.visible*/ })
 
     }
-   
+ 
     render() {
         
         return(
@@ -39,6 +39,7 @@ class PosterBlock extends Component {
                         <div style={{ width: '60%', maxWidth: '60%', textAlign: 'left' }}>
                             <p>Назва: <a>{this.props.name}</a></p>
                             <p>Рік: {this.props.year}</p>
+                            <p>Країна:{this.props.country}</p>
                             <p>Жанр: {this.props.genre}</p>
                             <p>Режисер: {this.props.director}</p>
                             <p>Актори: {this.props.actors}</p>
