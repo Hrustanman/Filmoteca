@@ -286,7 +286,9 @@ class App extends Component {
         tern: '',
         visiblePoster: [],
     }
-
+    componentDidMount() {
+        window.addEventListener('load', this.Clicker);
+    }
     //onDel = (id) => {
     //    const filmPresent = [...this.state.filmPresent]
     //    const ind = filmPresent.findIndex((el)=> el.id === id)
@@ -352,9 +354,7 @@ class App extends Component {
     }
 
     quickLinkChange = (quikLink) => {
-        console.log(this.state.tern)
-        this.setState({ tern: quikLink })
-        console.log(this.state.tern)
+        this.setState({ tern: quikLink }, this.Clicker)
     }
 
     render() {
