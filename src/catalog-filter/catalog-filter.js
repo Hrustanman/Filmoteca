@@ -12,25 +12,30 @@ class CatalogFilter extends Component {
    
     render() {
    
-        let liItems = this.props.catalogItem.map((some) => {
+        let listItems = this.props.catalogItem.map((some) => {
 
-            return <li onClick={() => this.props.quickLinkChange()(some)}>{some}</li> 
+            return <div onClick={() => this.props.quickLinkChange()(some)}>{some}<hr/></div> 
         })
-        let catalogClass = 'liItems'
+        let catalogClass = 'listItems'
         if (this.state.display) {
             catalogClass += ' done'
-        }
+        } 
         return (
 
-            <div >
+            <div onClick={this.ShowCatalog}
+                //onMouseLeave={this.ShowCatalog}
                
-                <div  className='titleFiltr' onClick={this.ShowCatalog}>
+            >
+             
+                <div className='titleFiltr' 
+                    
+                >
                     <span >{this.props.name1}</span>
                 </div >
-                <div className={catalogClass}>
-                    <ul  >
-                        {liItems}
-                    </ul>
+                <div onMouseLeave={this.ShowCatalog} className={catalogClass}>
+                    
+                        {listItems}
+                    
                 </div>
             </div>
 			)

@@ -243,7 +243,7 @@ class App extends Component {
                 id: 6
             },
             {
-                quickLinkName: 'Рассел Кроу',
+                quickLinkName: 'Трилер',
                 id: 7
             },
             {
@@ -350,6 +350,7 @@ class App extends Component {
             if (it.country.toLowerCase().indexOf(lowerCaseTern) > -1) {
                 return true;
             }
+          
         })
     }
 
@@ -371,7 +372,7 @@ class App extends Component {
                 //onDel={() => this.onDel(filmPresent.id)}
                 />
             )
-
+            
         })
         let quickLink = this.state.quickLink.map((quickLink) => {
             return (

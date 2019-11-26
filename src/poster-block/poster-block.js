@@ -19,7 +19,7 @@ class PosterBlock extends Component {
         
         return(
 
-            <div className = 'container'
+            <div className='container'
                 onMouseLeave={this.nonVisibleFilmposter} 
                 onMouseMove={this.visibleFilmposter}
                 className='poster_block my-3 mx-3'>
@@ -35,14 +35,14 @@ class PosterBlock extends Component {
                             <a>
                                 <img style={{ width: '100%', height: '100%'}} src={this.props.imagePopup} />
                             </a>
-                        </div>
+                        </div> 
                         <div style={{ width: '60%', maxWidth: '60%', textAlign: 'left' }}>
-                            <p>Назва: <a>{this.props.name}</a></p>
-                            <p>Рік: {this.props.year}</p>
-                            <p>Країна:{this.props.country}</p>
-                            <p>Жанр: {this.props.genre}</p>
-                            <p>Режисер: {this.props.director}</p>
-                            <p>Актори: {this.props.actors}</p>
+                            <p>Назва: <a href ='#'>{this.props.name}</a></p>
+                            <p>Рік:  <a href='#'>{this.props.year}</a></p>
+                            <p>Країна: <a href='#'>{this.props.country}</a></p>
+                            <p>Жанр:  <a href='#'>{this.props.genre}</a></p>
+                            <p>Режисер: <a href='#'> {this.props.director}</a></p>
+                            <p>Актори:  <a href='#'>{this.props.actors}</a></p>
                         </div>
                 </div>}
             </div>
