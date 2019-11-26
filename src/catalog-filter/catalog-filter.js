@@ -34,7 +34,7 @@ class CatalogFilter extends Component {
                 </div >
                 <div onMouseLeave={this.ShowCatalog} className={catalogClass}>
                     
-                        {listItems} s
+                        {listItems} sh
                     
                 </div>
             </div>
