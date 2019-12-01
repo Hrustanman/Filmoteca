@@ -5,17 +5,22 @@
 .listItems {
     z-index: 3;
     position: absolute;
-    border: 1px solid;
     border-radius: .25rem;
     background-color: #fff;
-    margin-top : 30px;
-    text-align:center;
+    margin-top: 30px;
+    text-align: center;
     padding: 5px;
-  }
-    .listItems div:after {
-       
-    }
-
+    color: #0089BA;
+    background-color: #08202e;
+}
+    .items {
+         text-align: left ;
+         padding: 0px 20px;
+      
+      }
+        .items:hover {
+            color: #08BBFC
+        }
 .titleFiltr {
     color:rgba(255,255,255,.6);
     border: 1px solid #08202e;

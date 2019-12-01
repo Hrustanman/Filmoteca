@@ -14,15 +14,15 @@ class CatalogFilter extends Component {
    
         let listItems = this.props.catalogItem.map((some) => {
 
-            return <div onClick={() => this.props.quickLinkChange()(some)}>{some}<hr/></div> 
+            return <div className= 'items col-6' onClick={() => this.props.quickLinkChange()(some)}>{some}</div> 
         })
         let catalogClass = 'listItems'
         if (this.state.display) {
             catalogClass += ' done'
         } 
         return (
-
-            <div onClick={this.ShowCatalog}
+             
+            <div  onClick={this.ShowCatalog}
                 //onMouseLeave={this.ShowCatalog}
                
             >
@@ -32,10 +32,10 @@ class CatalogFilter extends Component {
                 >
                     <span >{this.props.name1}</span>
                 </div >
-                <div onMouseLeave={this.ShowCatalog} className={catalogClass}>
-                    
-                        {listItems} sh
-                    
+                <div className={catalogClass} onMouseLeave={this.ShowCatalog} >
+                    <ul className='row' style={{ display: 'flex', padding: '15px',width: '300px' }} >
+                        {listItems}
+                    </ul>
                 </div>
             </div>
 			)
