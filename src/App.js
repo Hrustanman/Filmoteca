@@ -33,6 +33,9 @@ import sniperBig from './Images/sniperBig.jfif'
 import mindBig from './Images/mindBig.jfif'
 import wildBig from './Images/wildBig.jfif'
 import Popup from 'reactjs-popup'
+import { Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import Balvanka from './balvanka'
 
 
 class App extends Component {
@@ -285,6 +288,7 @@ class App extends Component {
         ],
         tern: '',
         visiblePoster: [],
+        routName: 'Balvanka'
     }
     componentDidMount() {
         window.addEventListener('load', this.Clicker);
@@ -402,7 +406,7 @@ class App extends Component {
                         </div>
                     </div>
                 </div>
-
+            
                 <div className=' container' style={{ marginTop: '30px' }}>
                     <div className='jumbotron'>
                         <div className='content_body'>
@@ -434,12 +438,15 @@ class App extends Component {
                                                 key={this.state.catalogFilter[3].id}
                                                 quickLinkChange={() => this.quickLinkChange}
                                             />
+                                            <Balvanka name2={this.state.routName} />
                                         </ul>
                                     </div>
-                                    <div className='d-inline-flex flex-wrap justify-content-center'>
-
-                                        {filmPoster}
+                                    <Router>
+                                        <div className='d-inline-flex flex-wrap justify-content-center'>
+                                            <Route path='/film' component={Balvanka} />
+                                            {filmPoster}
                                     </div>
+                                        </Router>
                                     <div>
                                     </div>
                                 </div>
