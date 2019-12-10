@@ -35,7 +35,7 @@ import wildBig from './Images/wildBig.jfif'
 import Popup from 'reactjs-popup'
 import { Link } from 'react-router-dom'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import Balvanka from './balvanka'
+
 
 
 class App extends Component {
@@ -288,7 +288,7 @@ class App extends Component {
         ],
         tern: '',
         visiblePoster: [],
-        routName: 'Balvanka'
+        disabledFilm: false
     }
     componentDidMount() {
         window.addEventListener('load', this.Clicker);
@@ -333,7 +333,8 @@ class App extends Component {
         if (tern.length === 0) {
             return item
         }
-        return item.filter((it) => {
+
+        var filmsToDisplay = item.filter((it) => {
             let lowerCaseTern = tern.toLowerCase();
 
             if (it.year.toLowerCase().indexOf(tern) > -1) {
@@ -354,8 +355,17 @@ class App extends Component {
             if (it.country.toLowerCase().indexOf(lowerCaseTern) > -1) {
                 return true;
             }
-          
-        })
+
+        }) /*|| this.setState({disabledFilm: true})*/
+
+        if (filmsToDisplay.length > 0) {
+            this.setState({ disabledFilm: false });
+        }
+        else {
+            this.setState({ disabledFilm: true });
+        }
+
+        return filmsToDisplay;
     }
 
     quickLinkChange = (quikLink) => {
@@ -363,7 +373,7 @@ class App extends Component {
     }
 
     render() {
-        let filmPoster = this.state.visiblePoster.map((visiblePoster) => {
+        let filmPoster = this.state.visiblePoster.map((visiblePoster) => { 
             return (
                 <PosterBlock
                     //name={filmPresent.name}                    
@@ -391,16 +401,17 @@ class App extends Component {
 
         return (
             <div>
+                <Router>
                 <Header
-                    onLabelChange={this.onLabelChange}
-                    onSubmit={this.onSubmit}
-                    value={this.state.tern}
-                    Clicker={this.Clicker}
+                        onLabelChange={this.onLabelChange}
+                        onSubmit={this.onSubmit}
+                        value={this.state.tern}
+                        Clicker={this.Clicker}
+                        //to={this.to}
                 />
 
                 <div className='container'>
                     <div style={{ marginTop: '100px' }}>
-
                         <div className='d-inline-flex flex-wrap justify-content-center'>
                             {quickLink}
                         </div>
@@ -413,7 +424,7 @@ class App extends Component {
                             <div>
                                 <div className='catalog-content-inner'>
                                     <div className='container'>
-                                        <ul style={{ padding: '60px' }} className="d-flex justify-content-between">
+                                        <ul style={{ padding: '0px 60px 60px' }} className="d-flex justify-content-between">
                                             <CatalogFilter
                                                 name1={this.state.catalogFilter[0].catalogName}
                                                 catalogItem={this.state.catalogFilter[0].catalogItem}
@@ -438,15 +449,23 @@ class App extends Component {
                                                 key={this.state.catalogFilter[3].id}
                                                 quickLinkChange={() => this.quickLinkChange}
                                             />
-                                            <Balvanka name2={this.state.routName} />
+                                         
+                                               
+                                          
                                         </ul>
                                     </div>
-                                    <Router>
-                                        <div className='d-inline-flex flex-wrap justify-content-center'>
-                                            <Route path='/film' component={Balvanka} />
-                                            {filmPoster}
+                                    <div style={{ textAlign: 'center' }} className='container d-inline-flex flex-wrap justify-content-center'>
+                                           
+                                             <Link to='/ww'>Link</Link>
+                                                <Route path='/ww' exact component={() => filmPoster} />
+                                                <Route path ='/vv' component={() => <CatalogFilter
+                                                name1={this.state.catalogFilter[3].catalogName}
+                                                catalogItem={this.state.catalogFilter[3].catalogItem}
+                                                key={this.state.catalogFilter[3].id}
+                                                quickLinkChange={() => this.quickLinkChange}
+                                            />} />
+                                            {this.state.disabledFilm && <h1 className='col-12'>За вашим запитом нічого не знайдено</h1>}    
                                     </div>
-                                        </Router>
                                     <div>
                                     </div>
                                 </div>
@@ -466,12 +485,13 @@ class App extends Component {
                         <li className="page-item"><a className="page-link" href="#">4</a></li>
                         <li className="page-item"><a className="page-link" href="#">5</a></li>
                         <li className="page-item">
-                            <a className="page-link" href="#">Next</a>
+                         <a className="page-link" href="#">Next</a>
                         </li>
                     </ul>
-                </nav>
-                <Footer />
-            </div>
+                    </nav>
+                    <Footer />
+                </Router>
+                    </div>
         )
     }
 }

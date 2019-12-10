@@ -12,6 +12,7 @@
     padding: 5px;
     color: #0089BA;
     background-color: #08202e;
+    cursor: pointer;
 }
     .items {
          text-align: left ;
@@ -27,6 +28,7 @@
     padding: 5px;
     border-radius: 4px;
     transition: 1s;
+    cursor:pointer;
 }
     .titleFiltr:hover {
         background-color: #08202e

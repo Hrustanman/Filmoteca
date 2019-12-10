@@ -10,6 +10,9 @@ header nav {
 .navbar-light .navbar-nav .nav-link  {
     color: rgba(255,255,255,.6);
 }
-.navbar-light .navbar-nav .nav-link:hover{
-    color: white;
+    .navbar-light .navbar-nav .nav-link:hover {
+        color: white;
+    }
+.link {
+margin-left: 30px;
 }

@@ -6,9 +6,9 @@
     "\\src\\catalog-filter",
     "\\src\\footer",
     "\\src\\header",
-    "\\src\\poster-block",
-    "\\src\\quickLink"
+    "\\src\\Images",
+    "\\src\\poster-block"
   ],
-  "SelectedNode": "\\src\\catalog-filter\\catalog-filter.js",
+  "SelectedNode": "\\src\\App.js",
   "PreviewInSolutionExplorer": false
 }
