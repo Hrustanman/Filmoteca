@@ -1,0 +1,39 @@
+
+.authorization {
+    background-color: #08202e;
+    border-radius: 4px;
+    padding: 20px;
+    color: #0089BA;
+    width: 400px;
+}
+form div, h2{
+    padding-bottom: 20px
+}
+
+.authorization a {
+    color: #139112
+} 
+.authorization a:hover {
+        text-decoration: none;
+        color: #57BB56;
+    }
+
+.authorization input, button {
+    border: 2px solid #212529;
+    outline: none;
+}
+.authorization input {
+    width: 70%;
+    background-color: #BDDDBC;
+}
+    ::-webkit-input-placeholder {
+        color: #1a1a1a;
+        opacity: 0.5
+    }
+button {
+    background-color: #0089BA;
+    border-radius: 4px;
+}
+button:hover {
+        background-color: #08BBFC;
+    }

@@ -2,6 +2,8 @@ import React from 'react';
 import { Component } from 'react'
 import Header from './header/header';
 import './App.css'
+import SignUp from './signUp/signUp'
+import LoginForm from './loginForm/loginForm'
 import Footer from './footer/footer'
 import PosterBlock from './poster-block/poster-block'
 import CatalogFilter from './catalog-filter/catalog-filter'
@@ -456,14 +458,9 @@ class App extends Component {
                                     </div>
                                     <div style={{ textAlign: 'center' }} className='container d-inline-flex flex-wrap justify-content-center'>
                                            
-                                             <Link to='/ww'>Link</Link>
-                                                <Route path='/ww' exact component={() => filmPoster} />
-                                                <Route path ='/vv' component={() => <CatalogFilter
-                                                name1={this.state.catalogFilter[3].catalogName}
-                                                catalogItem={this.state.catalogFilter[3].catalogItem}
-                                                key={this.state.catalogFilter[3].id}
-                                                quickLinkChange={() => this.quickLinkChange}
-                                            />} />
+                                            <Route path='/films' exact component={() => filmPoster} />
+                                            <Route path='/loginForm' component={LoginForm} />
+                                            <Route path='/signUp' component={SignUp}/>
                                             {this.state.disabledFilm && <h1 className='col-12'>За вашим запитом нічого не знайдено</h1>}    
                                     </div>
                                     <div>
