@@ -27,7 +27,7 @@ class LoginForm extends Component {
                         <Link  to ='/signUp' ><h4>Зареєструватись</h4></Link>
                     </div>
                     <div>
-                        <a href='#'>Забули пароль?</a>
+                        <a href='#'> Забули пароль?</a>
                     </div>
                     
                 </form>
