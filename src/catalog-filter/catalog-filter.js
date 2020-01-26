@@ -24,12 +24,8 @@ class CatalogFilter extends Component {
              
             <div  onClick={this.ShowCatalog}
                 //onMouseLeave={this.ShowCatalog}
-               
             >
-             
-                <div className='titleFiltr' 
-                    
-                >
+                <div className='titleFiltr'>
                     <span >{this.props.name1}</span>
                 </div >
                 <div className={catalogClass} onMouseLeave={this.ShowCatalog} >

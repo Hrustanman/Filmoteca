@@ -18,17 +18,18 @@ class LoginForm extends Component {
                         <button>Увійти</button>
                     </div>
                     <div>
-                        <label>
-                            <input type='checkbox' />
-                            Запам'ятати мене
+                        <label> 
+                         <input style={{ width: '20px' }} type='checkbox' />
+                             Запам'ятати мене 
                         </label>
-                    </div>
-                    <div>
-                        <a href='#'> Забули пароль?</a>
                     </div>
                     <div>
                         <Link  to ='/signUp' ><h4>Зареєструватись</h4></Link>
                     </div>
+                    <div>
+                        <a href='#'> Забули пароль?</a>
+                    </div>
+                    
                 </form>
 
             </div>

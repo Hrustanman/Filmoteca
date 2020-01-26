@@ -7,7 +7,7 @@ const Header = (props) => {
     return (
         <header>
             <nav className="navbar navbar-expand-lg navbar-light /*bg-light*/ fixed-top text-white">
-                <a className='navbar-brand' href='#' ><h1 style={{ fontFamily: 'Snell Roundhand, cursive', color: 'red', cursor: 'pointer' }}><Link to ='/films'>FilMotecA</Link></h1></a>
+                <a className='navbar-brand' href='#' ><h1 style={{ fontFamily: 'Snell Roundhand, cursive', color: 'red', cursor: 'pointer' }}><Link to ='/'>FilMotecA</Link></h1></a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse"  data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>

@@ -458,7 +458,7 @@ class App extends Component {
                                     </div>
                                     <div style={{ textAlign: 'center' }} className='container d-inline-flex flex-wrap justify-content-center'>
                                            
-                                            <Route path='/films' exact component={() => filmPoster} />
+                                            <Route path='/' exact component={() => filmPoster} />
                                             <Route path='/loginForm' component={LoginForm} />
                                             <Route path='/signUp' component={SignUp}/>
                                             {this.state.disabledFilm && <h1 className='col-12'>За вашим запитом нічого не знайдено</h1>}    
