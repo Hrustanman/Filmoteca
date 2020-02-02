@@ -5,8 +5,7 @@ body {
     /*overflow:hidden*/
 }
 .jumbotron {
-    background-color: #1B3645;
-
+    background-color: #0D1A21 /*#1B3645*/;
 }
 .red {
     color: red;
@@ -15,12 +14,15 @@ body {
 li {
     list-style-type: none
 }
-.filter_genre {
+/*.filter_genre {
     border: 2px solid;
     margin: 1rem;                       
-}
+}*/
 
 
 .PosterBlock {
     color: #2e859e
+}
+.linkunderline {
+    text-decoration: #3F7C9E underline;
 }

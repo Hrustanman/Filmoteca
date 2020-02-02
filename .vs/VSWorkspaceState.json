@@ -6,9 +6,10 @@
     "\\src\\catalog-filter",
     "\\src\\header",
     "\\src\\loginForm",
+    "\\src\\poster-block",
     "\\src\\quickLink",
     "\\src\\signUp"
   ],
-  "SelectedNode": "\\src\\loginForm\\loginForm.js",
+  "SelectedNode": "\\src\\catalog-filter\\catalog-filter.js",
   "PreviewInSolutionExplorer": false
 }

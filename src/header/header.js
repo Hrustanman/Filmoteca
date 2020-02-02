@@ -1,13 +1,13 @@
 import React from 'react'
 import './header.css'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 const Header = (props) => {
     
     return (
         <header>
             <nav className="navbar navbar-expand-lg navbar-light /*bg-light*/ fixed-top text-white">
-                <a className='navbar-brand' href='#' ><h1 style={{ fontFamily: 'Snell Roundhand, cursive', color: 'red', cursor: 'pointer' }}><Link to ='/'>FilMotecA</Link></h1></a>
+                <a className='navbar-brand' href='#' ><h1 style={{ fontFamily: 'Snell Roundhand, cursive', color: 'red', cursor: 'pointer' }}><Link  to ='/'>FilMotecA</Link></h1></a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse"  data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -93,13 +93,13 @@ const Header = (props) => {
                             className="btn btn-outline-success my-2 my-sm-0" type="submit">Пошук</button>
                       
                     </form>
-                    <Link to='/loginForm' className='link'>Авторизація</Link>
+                    <NavLink activeClassName='linkunderline' to='/loginForm' className='link'>Авторизація</NavLink>
                 </div>
 
             </nav>
 
         </header>
-        )
+        ) 
 }
 
 export default Header

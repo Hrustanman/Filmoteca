@@ -7,6 +7,7 @@ import LoginForm from './loginForm/loginForm'
 import Footer from './footer/footer'
 import PosterBlock from './poster-block/poster-block'
 import CatalogFilter from './catalog-filter/catalog-filter'
+import MovieCards from './movieCards/movieCards'
 import zodiac from './Images/zodiac.jpg'
 import atlantis from './Images/atlantis.jpg'
 import garry from './Images/garry poter.jpg'
@@ -37,6 +38,7 @@ import wildBig from './Images/wildBig.jfif'
 import Popup from 'reactjs-popup'
 import { Link } from 'react-router-dom'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
+
 
 
 
@@ -375,6 +377,7 @@ class App extends Component {
     }
 
     render() {
+
         let filmPoster = this.state.visiblePoster.map((visiblePoster) => { 
             return (
                 <PosterBlock
@@ -390,6 +393,16 @@ class App extends Component {
             )
             
         })
+        let filmCards = this.state.filmPresent.map((filmPresent) => {
+            return (
+                <MovieCards
+                    //filmImage={filmPresent.image}
+                    {...filmPresent}
+                />
+            )
+
+        })
+       
         let quickLink = this.state.quickLink.map((quickLink) => {
             return (
                 <QuickLink
@@ -454,13 +467,15 @@ class App extends Component {
                                          
                                                
                                           
-                                        </ul>
+                                            </ul>
+                                           
                                     </div>
                                     <div style={{ textAlign: 'center' }} className='container d-inline-flex flex-wrap justify-content-center'>
                                            
                                             <Route path='/' exact component={() => filmPoster} />
                                             <Route path='/loginForm' component={LoginForm} />
-                                            <Route path='/signUp' component={SignUp}/>
+                                            <Route path='/signUp' component={SignUp} />
+                                            <Route path='/movieDescription' component={() => filmCards[3]} />
                                             {this.state.disabledFilm && <h1 className='col-12'>За вашим запитом нічого не знайдено</h1>}    
                                     </div>
                                     <div>
