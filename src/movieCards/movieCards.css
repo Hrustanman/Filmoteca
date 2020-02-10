@@ -1,0 +1,45 @@
+
+.movieCard {
+    display: flex;
+    background-color: #f9f9f9;
+    text-align: justify;
+    border-radius: 4px;
+    height: 60vw;
+}
+.filmImage{
+    display: flex;
+    justify-content: flex-start;
+    width:40%;
+    padding:5px 5px 30%;
+    
+   
+}
+.filmDiskription {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    font-size: 14px;
+    margin: 20px;
+
+}
+    .filmDiskription div {
+        margin: 5px;
+
+    }
+.movieCard img {
+   width: 100%;
+    height:100%;
+   }
+.filmDiskription span {
+    display: inline-block;
+    max-width: 300px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align:left;
+}
+
+.label {
+    color: #8f95a3;
+    width: 150px;
+   vertical-align: top;
+}

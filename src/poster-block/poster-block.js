@@ -28,7 +28,7 @@ class PosterBlock extends Component {
                 <div className='row'>
                     <div className = 'col'>
                         <a>
-                         <img src={this.props.image} />
+                            <Link to = 'movieDescription'><img src={this.props.image} /></Link>
                     <div> <h6>{this.props.name}({this.props.year})</h6></div>
                 </a>
                     </div>

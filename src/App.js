@@ -23,7 +23,7 @@ import mind from './Images/mind.jpg'
 import garryBig from './Images/garry poter big.jpg'
 import wild from './Images/into the wild.jpg'
 import QuickLink from './quickLink/quickLink';
-import rempageBig from './Images/rempegeBig.jpg'
+import rempageBig from './Images/rempegeBig1.jpg'
 import slownBig from './Images/slownBig.jfif'
 import unknownBig from './Images/unknownBig.jfif'
 import zodiacBig from './Images/zodiacBig.jfif'
@@ -54,8 +54,16 @@ class App extends Component {
                 year: '2018',
                 actors: 'Двейн Джонсон,Наомі Гарріс,Малін Акерман',
                 director: 'Бред Пейто',
-                genre: 'бойовик',
-                country: 'США'
+                genre: 'Бойовик',
+                country: 'США',
+                discription: "Девіс Окою, колишній спецназівець, борець з браконьєрами, а нині фахівець з мавп, давно зрозумів, що спілкуватися з тваринами йому куди простіше, ніж з людьми. Своє подальше життя він вирішив присвятити роботі в каліфорнійському національному заповіднику: тут Девіс контролює популяцію горил, а заодно наглядає за своїм улюбленцем - горилою-альбіносом Джорджем, якого він колись врятував від смерті. В черговий раз заступивши на зміну, Девіс виявляє, що за ніч з Джорджем відбулися жахливі зміни: він став набагато більше, в рази сильніше і перетворився на некерованого і лютого звіра. Намагаючись у всьому розібратися, Девіс знайомиться з доктором Кейт Колдуелл, яка визнається, що за всім, що відбувається варто корпорація «Енерджін» і її експерименти в області генної інженерії, які вийшли з-під контролю. Кейт і сама колись брала участь в розробках «Енерджін», тому вона єдина, хто може вилікувати Джорджа. Незабаром з'ясовується, що Джордж - не єдине тварина, яке постраждало в результаті помилок корпорації: в країні виявляються ще два звіра-мутанта - дев'ятиметровий вовк і гігантський алігатор. При цьому тварини несподівано об'єднуються і спрямовуються в Чикаго, погрожуючи стерти місто з лиця землі.Фільм «Ремпейдж», заснований на однойменній відеогрі 1980-х років, ви можете подивитися онлайн на нашому сайті.",
+                secondaryActors: 'Джо Манганьєлло,Марлі Шелтон,Джеффрі Дін Морган',
+                producer: '	Бо Флінн, Хірам Гарсія, Двейн Джонсон',
+                screenwriter: "Карлтон К'юз Раян Енгл,Раян Дж.Кондел",
+                operator: 'Джерон Презент',
+                duration: '107 хвилин',
+                translation: 'Професійний',
+                company: 'New Line Cinema,Twisted Media, Wrigley Pictures'
 
             },
             {
@@ -475,7 +483,7 @@ class App extends Component {
                                             <Route path='/' exact component={() => filmPoster} />
                                             <Route path='/loginForm' component={LoginForm} />
                                             <Route path='/signUp' component={SignUp} />
-                                            <Route path='/movieDescription' component={() => filmCards[3]} />
+                                            <Route path='/movieDescription' component={() => filmCards[0]} />
                                             {this.state.disabledFilm && <h1 className='col-12'>За вашим запитом нічого не знайдено</h1>}    
                                     </div>
                                     <div>
