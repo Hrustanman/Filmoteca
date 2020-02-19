@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import  './quickLink.css'
 class QuickLink extends Component {
 
 
@@ -8,8 +8,8 @@ class QuickLink extends Component {
         return (
             <>
 
-                <a onClick={() => this.props.quickLinkChange()(this.props.quickLinkName)}
-                    className="btn btn-secondary my-1 mx-1"
+                <a  onClick={() => this.props.quickLinkChange()(this.props.quickLinkName)}
+                    className="quickLink btn btn-secondary my-1 mx-1"
                     href='#' >{this.props.quickLinkName}</a >
             </>
 			)

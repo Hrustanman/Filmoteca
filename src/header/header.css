@@ -5,14 +5,14 @@
     pointer-events: none;
 }
 header nav {
-    background-color: #08202e;
+    background-color: #292c33 /*#08202e*/;
+ 
 }
 .navbar-light .navbar-nav .nav-link  {
     color: rgba(255,255,255,.6);
 }
-    .navbar-light .navbar-nav .nav-link:hover {
-        color: white;
-    }
+.navbar-light .navbar-nav .nav-link:hover {
+        color: white;}
 .link {
     margin: 0px 2%;
     color: #3F7C9E;
@@ -21,12 +21,12 @@ header nav {
     padding: 6px 5px;
     text-decoration:none;
 }
-    .link:hover, .navbar-brand h1 a:hover {
+.link:hover, .navbar-brand h1 a:hover {
         text-decoration: none;
         color: #3F7C9E;
         opacity: 0.5;
     }
 .navbar-brand h1 a {
-    color: #3F7C9E;
+    color:#3F7C9E;
 }
 

@@ -4,7 +4,6 @@ import Header from './header/header';
 import './App.css'
 import SignUp from './signUp/signUp'
 import LoginForm from './loginForm/loginForm'
-import Footer from './footer/footer'
 import PosterBlock from './poster-block/poster-block'
 import CatalogFilter from './catalog-filter/catalog-filter'
 import MovieCards from './movieCards/movieCards'
@@ -35,6 +34,12 @@ import jungleBig from './Images/jungleBig.jfif'
 import sniperBig from './Images/sniperBig.jfif'
 import mindBig from './Images/mindBig.jfif'
 import wildBig from './Images/wildBig.jfif'
+import envelope from './Images/Icon/envelope.png'
+import iconePhone from './Images/Icon/iconPhone.png'
+import mapflag from './Images/Icon/mapflag.png'
+import facebook from './Images/Icon/facebook.png'
+import twitter from './Images/Icon/twitter.png'
+import { } from 'react-icons'
 import Popup from 'reactjs-popup'
 import { Link } from 'react-router-dom'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
@@ -430,8 +435,9 @@ class App extends Component {
                         onSubmit={this.onSubmit}
                         value={this.state.tern}
                         Clicker={this.Clicker}
-                        //to={this.to}
-                />
+                        
+                    />
+                 
 
                 <div className='container'>
                     <div style={{ marginTop: '100px' }}>
@@ -505,11 +511,36 @@ class App extends Component {
                         <li className="page-item"><a className="page-link" href="#">4</a></li>
                         <li className="page-item"><a className="page-link" href="#">5</a></li>
                         <li className="page-item">
-                         <a className="page-link" href="#">Next</a>
+                                <a className="page-link" href="#">Next</a>
+                              
                         </li>
                     </ul>
                     </nav>
-                    <Footer />
+                   
+
+                    <footer>
+
+
+                        <div className=' padding_foter d-flex justify-content-around'>
+                            <div className = 'footerContacts'>
+                            <div>
+                                    <div> <h6>Наші контакти:</h6>
+                                        <div> <img src={envelope} /><span><a href ='#'> hrustanman@gmail.com</a></span></div>
+                                    <div> <img src={iconePhone} /> <span>+380(97)7484854 </span></div>
+                                    <div> <img src={mapflag} /><span> Zhitomir, Ukraine</span> </div>
+                            </div>
+                            </div>
+                                <div>
+                                <div> <h6> Ми у соцмережах:</h6> </div>
+                                <img src={facebook} />
+                                <img src={twitter} />
+                                </div>
+                            </div>
+                            <div className='copyright'><h6> © 2020 Filmoteca.me </h6></div>
+                        </div>
+
+                    </footer>
+                  
                 </Router>
                     </div>
         )

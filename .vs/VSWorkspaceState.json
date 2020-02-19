@@ -2,8 +2,6 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\catalog-filter",
-    "\\src\\footer",
     "\\src\\header",
     "\\src\\loginForm",
     "\\src\\movieCards",
@@ -11,6 +9,6 @@
     "\\src\\quickLink",
     "\\src\\signUp"
   ],
-  "SelectedNode": "\\src\\movieCards\\movieCards.js",
+  "SelectedNode": "\\src\\quickLink\\quickLink.js",
   "PreviewInSolutionExplorer": false
 }
