@@ -39,6 +39,8 @@ import iconePhone from './Images/Icon/iconPhone.png'
 import mapflag from './Images/Icon/mapflag.png'
 import facebook from './Images/Icon/facebook.png'
 import twitter from './Images/Icon/twitter.png'
+import linkedin from './Images/Icon/in.svg'
+import yt from './Images/Icon/yt.svg'
 import { } from 'react-icons'
 import Popup from 'reactjs-popup'
 import { Link } from 'react-router-dom'
@@ -57,7 +59,7 @@ class App extends Component {
                 imagePopup: rempageBig,
                 name: 'Ремпейдж',
                 year: '2018',
-                actors: 'Двейн Джонсон,Наомі Гарріс,Малін Акерман',
+                actors: 'Двейн Джонсон, Наомі Гарріс, Малін Акерман',
                 director: 'Бред Пейто',
                 genre: 'Бойовик',
                 country: 'США',
@@ -426,7 +428,7 @@ class App extends Component {
                 />
             )
         })
-
+        let next = 3;
         return (
             <div>
                 <Router>
@@ -453,7 +455,7 @@ class App extends Component {
                             <div>
                                 <div className='catalog-content-inner'>
                                     <div className='container'>
-                                        <ul style={{ padding: '0px 60px 60px' }} className="d-flex justify-content-between">
+                                        <ul  className="d-flex justify-content-between transoformColumn ">
                                             <CatalogFilter
                                                 name1={this.state.catalogFilter[0].catalogName}
                                                 catalogItem={this.state.catalogFilter[0].catalogItem}
@@ -485,8 +487,11 @@ class App extends Component {
                                            
                                     </div>
                                     <div style={{ textAlign: 'center' }} className='container d-inline-flex flex-wrap justify-content-center'>
-                                           
+
                                             <Route path='/' exact component={() => filmPoster} />
+                                            <Route path='/page/1' component={() => filmPoster.slice(0, 5)} />
+                                            <Route path='/page/2' component={() => filmPoster.slice(5, 10)} />
+                                            <Route path='/page/3' component={() => filmPoster.slice(10, 14)} />
                                             <Route path='/loginForm' component={LoginForm} />
                                             <Route path='/signUp' component={SignUp} />
                                             <Route path='/movieDescription' component={() => filmCards[0]} />
@@ -500,18 +505,18 @@ class App extends Component {
                     </div>
                 </div>
 
-                <nav>
-                    <ul className="pagination justify-content-center">
+                    <nav>
+                        <ul className="pagination justify-content-center">
                         <li className="page-item disabled">
-                            <a className="page-link" href="#" tabIndex="-1">Previous</a>
-                        </li>
-                        <li className="page-item"><a className="page-link" href="#">1</a></li>
-                        <li className="page-item"><a className="page-link" href="#">2</a></li>
-                        <li className="page-item"><a className="page-link" href="#">3</a></li>
-                        <li className="page-item"><a className="page-link" href="#">4</a></li>
-                        <li className="page-item"><a className="page-link" href="#">5</a></li>
+                            <a className="page-link" href="#" tabIndex="-1">Попередня</a>
+                            </li>
+                            <li className="page-item"><Link to = '/page/1' className="page-link">1</Link></li>
+                            <li className="page-item"><Link to = '/page/2' className="page-link">2</Link></li>
+                            <li className="page-item"><Link to = '/page/3' className="page-link">3</Link></li>
+                            <li className="page-item"><Link to = '/page/4' className="page-link">4</Link></li>
+                            <li className="page-item"><Link to = '/page/5' className="page-link">5</Link></li>
                         <li className="page-item">
-                                <a className="page-link" href="#">Next</a>
+                                <a className="page-link" href={'/page/' + next}>Наступна</a>
                               
                         </li>
                     </ul>
@@ -525,15 +530,17 @@ class App extends Component {
                             <div className = 'footerContacts'>
                             <div>
                                     <div> <h6>Наші контакти:</h6>
-                                        <div> <img src={envelope} /><span><a href ='#'> hrustanman@gmail.com</a></span></div>
+                                     <div> <img src={envelope} /><span> hrustanman@gmail.com</span></div>
                                     <div> <img src={iconePhone} /> <span>+380(97)7484854 </span></div>
                                     <div> <img src={mapflag} /><span> Zhitomir, Ukraine</span> </div>
                             </div>
                             </div>
-                                <div>
-                                <div> <h6> Ми у соцмережах:</h6> </div>
-                                <img src={facebook} />
-                                <img src={twitter} />
+                                <div className ='socialNetwork'>
+                                    <div > <h6> Ми у соцмережах:</h6> </div>
+                                    <a href = '#'> <img src={facebook} /> </a>
+                                    <a href='#'><img src={twitter} /> </a>
+                                    <a href='#'> <img src={linkedin} /> </a>
+                                    <a href='#'><img src={yt} /> </a>
                                 </div>
                             </div>
                             <div className='copyright'><h6> © 2020 Filmoteca.me </h6></div>

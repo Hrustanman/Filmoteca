@@ -5,11 +5,13 @@ body {
     background-image: url('.\Images\felix-movie.jpg');
     background-size:cover;
     font-size: 16px;
-    /*overflow:hidden*/
+    overflow-x:hidden;
 }
+
 .jumbotron {
     background-color: #dcdce4;
-}
+} 
+
 .red {
     color: red;
 }
@@ -63,7 +65,18 @@ footer div {
     font-weight:700;
     font-size: 18px;
 }
-.footerContacts a {
-    text-decoration: none;
-
+.socialNetwork img{
+    margin: 25px 10px;
+    width: 40px;
+}
+.transoformColumn {
+    padding-left: 0px !important;
+}
+@media(max-width: 720px) {
+    .transoformColumn {
+        display: flex;
+        flex-direction: column;
+        padding-left: initial;
+        align-items: center
+    }
 }

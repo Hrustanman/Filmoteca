@@ -14,18 +14,31 @@ header nav {
 .navbar-light .navbar-nav .nav-link:hover {
         color: white;}
 .link {
-    margin: 0px 2%;
-    color: #3F7C9E;
+    margin: 10px;
+    /*color: #3F7C9E;
     border: 2px solid #212529;
     border-radius: 2px;
     padding: 6px 5px;
-    text-decoration:none;
+    text-decoration:none;*/
 }
 .link:hover, .navbar-brand h1 a:hover {
         text-decoration: none;
-        color: #3F7C9E;
+        /*color: #3F7C9E;*/
         opacity: 0.5;
     }
+@media (max-width: 1170px)
+and (min-width:990px){
+    .link {
+        margin-top: 5px !important;
+       }
+}
+@media (max-width: 1030px)
+and (min-width:990px) {
+    .indent {
+        margin-top: 5px !important;
+    }
+}
+
 .navbar-brand h1 a {
     color:#3F7C9E;
 }

@@ -1,8 +1,7 @@
 .poster_block {
-    width: 140px;
+    width: 160px;
     text-align: center;
     color: #0089BA;
-    font-weight: bold;
     cursor: pointer;
 }
 
@@ -16,7 +15,7 @@
     border-radius: 4px;
     background-color: #08202e;
     height: 300px;
-    width: 600px;
+    width: 420px;
     display: flex;
     justify-content: space-around;
     padding: 5px;
@@ -24,18 +23,52 @@
     font-weight: normal;
     font-family: Roboto,Arial,Helvetica,Helvetica Neue,FreeSans,sans-serif;
     color: rgba(255,255,255,0.6);
+    }
+.filmData {
+    width: 60%;
+    max-width: 60%;
+    text-align:left;
 }
-.popupPosterBlock p{
-    margin-left: 5px;
-    font-size: 14px;
-}
+   
+    .filmData span {
+        display: inline-block;
+        width: 70px;
+        color: red;
+        margin-left: 5px;
+        vertical-align: top;
+
+    } 
+    .filmData span:last-child {
+        width: 150px;
+        color:aqua
+        }
+    .filmData div {
+        margin-bottom: 15px;
+    }
+
+    .popupPosterBlock p {
+        margin-left: 5px;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
 .poster_block a {
     text-decoration: none;
     color: #0089BA
 }
+.popupPosterBlock img {
+    width: 100%;
+    height: 100%;
+}
 
- .poster_block a:hover {
-        color: #08BBFC
+@media (max-width:1200px) {
+    .popupPosterBlock img {
+       height:auto
     }
+}
+
+
+.poster_block a:hover {
+    color: #08BBFC
+}
 
 
