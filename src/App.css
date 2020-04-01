@@ -31,7 +31,10 @@ li {
 .linkunderline {
     text-decoration: #3F7C9E underline;
 }
-
+.catalogContent {
+    border-bottom: 2px solid #a7b3cb;
+    margin-bottom: 30px;
+}
 footer {
     color: white;
     background-color: #292c33;

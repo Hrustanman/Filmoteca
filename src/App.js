@@ -451,11 +451,11 @@ class App extends Component {
             
                 <div className=' container' style={{ marginTop: '30px' }}>
                     <div className='jumbotron'>
-                        <div className='content_body'>
+                        <div>
                             <div>
-                                <div className='catalog-content-inner'>
-                                    <div className='container'>
-                                        <ul  className="d-flex justify-content-between transoformColumn ">
+                                    <div className='catalog-content-inner'>
+                                        <div className='container catalogContent'>
+                                        <ul  className="d-flex justify-content-center transoformColumn ">
                                             <CatalogFilter
                                                 name1={this.state.catalogFilter[0].catalogName}
                                                 catalogItem={this.state.catalogFilter[0].catalogItem}
@@ -485,7 +485,7 @@ class App extends Component {
                                           
                                             </ul>
                                            
-                                    </div>
+                                        </div>
                                     <div style={{ textAlign: 'center' }} className='container d-inline-flex flex-wrap justify-content-center'>
 
                                             <Route path='/' exact component={() => filmPoster} />

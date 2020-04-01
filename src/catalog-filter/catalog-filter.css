@@ -30,6 +30,7 @@
     transition: 1s;
     cursor: pointer;
     text-align:center;
+    margin: 0px 20px;
    
 }
 @media (max-width: 768px){
@@ -49,13 +50,10 @@
     width: 300px;
 }
 hr {
-    /*border: 0;*/
-    /*clear: both;*/
-    display: block;
     margin: auto;
     width: 100%;
     background-color: #a7b3cb;
     border: 0px;
-    border-bottom: 1px solid;
+    border: 1px solid;
    
 }

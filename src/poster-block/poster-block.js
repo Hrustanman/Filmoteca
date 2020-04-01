@@ -33,14 +33,14 @@ class PosterBlock extends Component {
                 </a>
                     </div>
                     {this.state.visible && <div style={{ position: 'absolute' }} className='popupPosterBlock col-4'>
-                        <div style={{ width: '40%' }}>
+                        <div className='popupPosterBlockImg'>
                             <a>
                                 <Link to='movieDescription'> <img src={this.props.imagePopup} />
                                 </Link>
                             </a>
                         </div> 
-                        <div className= 'filmData'>
-                            <div> <span>Назва:   </span><span><a href ='#'>{this.props.name}</a>    </span></div>
+                        <div className='filmData'>
+                            <div className= 'filmTitle'>{this.props.name}</div>
                             <div> <span>Рік:     </span><span><a href='#'>{this.props.year}</a>     </span></div>
                             <div> <span>Країна:  </span><span><a href='#'>{this.props.country}</a>  </span></div>
                             <div> <span>Жанр:    </span><span><a href='#'>{this.props.genre}</a>    </span></div>
