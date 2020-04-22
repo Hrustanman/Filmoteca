@@ -5,7 +5,7 @@ class MovieCards extends Component {
         return (
             <div className='movieCard'>
                 <div className='filmImage'>
-                    <img src={this.props.imagePopup} />
+                    <img  src={this.props.imagePopup} />
                 </div>
                 <div className='filmDiskription'>
                     <div>

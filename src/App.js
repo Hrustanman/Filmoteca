@@ -307,7 +307,8 @@ class App extends Component {
         ],
         tern: '',
         visiblePoster: [],
-        disabledFilm: false
+        disabledFilm: false,
+        next : 1
     }
     componentDidMount() {
         window.addEventListener('load', this.Clicker);
@@ -331,10 +332,17 @@ class App extends Component {
     //    this.setState({ filmPresent })
     //    console.log({ filmPresent })
     //}
-
+    nextPage =()=>  {
+        this.setState((state) => { return { next:state.next + 1 } } )
+       
+    }
+   
+    previousPage = () => {
+        this.setState({ next: --this.state.next })
+    }
     onLabelChange = (e) => {
         this.setState({ tern: e.target.value })
-    }
+ }
 
     onSubmit = (e) => {
         e.preventDefault()
@@ -345,7 +353,6 @@ class App extends Component {
     Clicker = () => {
         let ar = this.search(this.state.filmPresent, this.state.tern)
         this.setState({ visiblePoster: ar })
-        console.log()
     }
 
     search = (item, tern) => {
@@ -378,7 +385,8 @@ class App extends Component {
         }) /*|| this.setState({disabledFilm: true})*/
 
         if (filmsToDisplay.length > 0) {
-            this.setState({ disabledFilm: false });
+            this.setState({ disabledFilm: false })
+        
         }
         else {
             this.setState({ disabledFilm: true });
@@ -424,11 +432,9 @@ class App extends Component {
                     quickLinkChange={() => this.quickLinkChange}
                     {...quickLink}
                     key={quickLink.id}
-                    
-                />
+              />
             )
         })
-        let next = 3;
         return (
             <div>
                 <Router>
@@ -507,33 +513,33 @@ class App extends Component {
 
                     <nav>
                         <ul className="pagination justify-content-center">
-                        <li className="page-item disabled">
-                            <a className="page-link" href="#" tabIndex="-1">Попередня</a>
+                            <li className="page-item">
+                                <Link onClick={this.previousPage}  className="page-link" to={'/page/' + this.state.next}>Попередня</Link>
                             </li>
                             <li className="page-item"><Link to = '/page/1' className="page-link">1</Link></li>
                             <li className="page-item"><Link to = '/page/2' className="page-link">2</Link></li>
                             <li className="page-item"><Link to = '/page/3' className="page-link">3</Link></li>
                             <li className="page-item"><Link to = '/page/4' className="page-link">4</Link></li>
                             <li className="page-item"><Link to = '/page/5' className="page-link">5</Link></li>
-                        <li className="page-item">
-                                <a className="page-link" href={'/page/' + next}>Наступна</a>
-                              
-                        </li>
-                    </ul>
+                            <li className="page-item">
+                                <Link onClick={this.nextPage} className="page-link" to={'/page/' + this.state.next}>Наступна</Link>
+                            </li>
+                        </ul>
+                        <button onClick={this.nextPage}>Count+</button>
+                        <span style={{ color:'aqua' }}>{this.state.next}</span>
                     </nav>
                    
 
                     <footer>
-
-
-                        <div className=' padding_foter d-flex justify-content-around'>
+                        <div /*className='d-flex justify-content-around'*/>
                             <div className = 'footerContacts'>
                             <div>
-                                    <div> <h6>Наші контакти:</h6>
-                                     <div> <img src={envelope} /><span> hrustanman@gmail.com</span></div>
+                                  <div>
+                                    <h6>Наші контакти:</h6>
+                                    <div> <img src={envelope} /><span> hrustanman@gmail.com</span></div>
                                     <div> <img src={iconePhone} /> <span>+380(97)7484854 </span></div>
                                     <div> <img src={mapflag} /><span> Zhitomir, Ukraine</span> </div>
-                            </div>
+                                  </div>
                             </div>
                                 <div className ='socialNetwork'>
                                     <div > <h6> Ми у соцмережах:</h6> </div>
@@ -545,7 +551,6 @@ class App extends Component {
                             </div>
                             <div className='copyright'><h6> © 2020 Filmoteca.me </h6></div>
                         </div>
-
                     </footer>
                   
                 </Router>

@@ -9,26 +9,30 @@ class LoginForm extends Component {
                 <form>
                     <h2>Вхід</h2>
                     <div>
-                        <input placeholder = ' Логін' type='text' />
+                        <p>Логін:</p>
+                        <input type='text' />
                     </div>
                     <div>
-                        <input placeholder=' Пароль' type = 'password' />
+                        <p>Пароль:</p>
+                        <input  type = 'password' />
+                    </div>
+                    <div>
+                        <a href='#'> Забули пароль?</a>
+                        <Link  to ='/signUp' >Зареєструватись</Link> 
                     </div>
                     <div>
                         <button>Увійти</button>
                     </div>
                     <div>
-                        <label> 
-                         <input style={{ width: '20px' }} type='checkbox' />
+                        <label>
+                            <input type='checkbox' />
                              Запам'ятати мене 
                         </label>
                     </div>
-                    <div>
-                        <Link  to ='/signUp' ><h4>Зареєструватись</h4></Link>
-                    </div>
-                    <div>
-                        <a href='#'> Забули пароль?</a>
-                    </div>
+                   
+                   
+                        
+                    
                     
                 </form>
 

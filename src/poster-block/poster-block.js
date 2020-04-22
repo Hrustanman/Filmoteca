@@ -22,7 +22,7 @@ class PosterBlock extends Component {
         return(
 
             <div
-                //onMouseLeave={this.nonVisibleFilmposter} 
+                onMouseLeave={this.nonVisibleFilmposter} 
                 onMouseMove={this.visibleFilmposter}
                 className=' poster_block my-3 mx-3'>
                 <div className='row' >

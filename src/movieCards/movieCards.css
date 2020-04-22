@@ -4,11 +4,11 @@
     background-color: #f9f9f9;
     text-align: justify;
     border-radius: 4px;
-    height: 750px;
+    height: 100%;
 }
 .filmImage{
     width:40%;
-    padding:5px 5px 30%;
+    padding:5px 5px;
     
    
 }
@@ -22,9 +22,13 @@
         margin: 5px;
         display:flex;
        }
-    .filmDiskription h1 {
-        color: #48759A;
+    .filmDiskription div:nth-child(2) {
+        margin-bottom: 50px
+     
     }
+    .filmDiskription h1 {
+            color: #48759A;
+        }
 .movieCard img {
    max-width: 100%;
    }
@@ -45,27 +49,18 @@
     vertical-align: top;
     font-weight:700
 }
-@media (max-width: 1200px) {
-    .movieCard {
-        height:  835px;
-    }
-}
-@media (max-width: 990px){
-   .filmDiskription {
-       line-height: 17px;
-   }
-    .filmDiskription  {
-       margin-top: 5px;
-    }
-    .filmDiskription div{
-        margin: 0px;
-    }
-    .filmDiskription h1 {
-        font-size: 26px;
-        margin: 0px;
-    }
 
-}
+
 @media (max-width: 775px) {
-
+    .movieCard {
+        flex-direction: column;
+    }
+   
+    .filmDiskription {
+        max-width: 100%
+    }
+    .filmImage {
+        width: 100%;
+    }
 }
+

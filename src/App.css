@@ -83,3 +83,11 @@ footer div {
         align-items: center
     }
 }
+@media(max-width: 575px){
+    .footerContacts{
+        flex-direction: column;
+    }
+    .footerContacts div {
+        text-align: center;
+    }
+}
