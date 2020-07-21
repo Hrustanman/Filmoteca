@@ -14,7 +14,7 @@ class CatalogFilter extends Component {
    
         let listItems = this.props.catalogItem.map((some) => {
 
-            return  <div className='items col-6' onClick={() => this.props.quickLinkChange()(some)}>{some}<hr/></div>
+            return  <div className='items col-6' onClick={() => this.props.quickLinkChange()(some)}>{some}</div>
                
                   
                 })
@@ -23,8 +23,7 @@ class CatalogFilter extends Component {
             catalogClass += ' done'
         } 
         return (
-            <div  onClick={this.ShowCatalog}
-                //onMouseLeave={this.ShowCatalog}
+            <div onClick={this.ShowCatalog} //onMouseLeave={this.ShowCatalog}
             >
                 <div className='titleFiltr'>
                     <span>{this.props.name1}</span>
@@ -32,7 +31,7 @@ class CatalogFilter extends Component {
                 <div className={catalogClass} onMouseLeave={this.ShowCatalog} >
                     <ul className='row showList'>
                         {listItems}
-                 </ul>
+                    </ul>
                 </div>
             </div>
 			)

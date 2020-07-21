@@ -49,6 +49,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 
 
+
 class App extends Component {
 
     state = {
@@ -501,10 +502,11 @@ class App extends Component {
                                             <Route path='/loginForm' component={LoginForm} />
                                             <Route path='/signUp' component={SignUp} />
                                             <Route path='/movieDescription' component={() => filmCards[0]} />
-                                            {this.state.disabledFilm && <h1 className='col-12'>За вашим запитом нічого не знайдено</h1>}    
+                                            {this.state.disabledFilm && <h1 className='col-12'>За вашим запитом нічого не знайдено</h1>}
+
                                     </div>
                                     <div>
-                                    </div>
+                                    </div>  
                                 </div>
                             </div>
                         </div>
