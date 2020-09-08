@@ -1,20 +1,22 @@
 
 .posterBlock {
-    background-color: #f9f9f9;
+    background-color: #222;
     position: relative;
     border-radius: 5px;
+    width: 230px;
 }
 
+
     .posterBlock div {
-        width: 260px;
+        width:100%;
     }
 .filmData {
-    top: 420px;
+    top: 363px;
     position: absolute;
     text-align: left;
     z-index: 10;
     padding: 10px;
-    background-color: #f9f9f9;
+    background-color: #222;
     border-radius: 0px 0px 5px 5px;
 }
 .filmData div {
@@ -36,23 +38,26 @@
     width: 100%
 }
     .posterBlock span a {
-        color: #688297;
+        color: #808080;
         font-weight: 700;
         font-size: 14px;
     }
 .posterBlock img {
-    margin: 20px;
+    margin-top: 15px;
     width: 200px;
     height: 300px;
 }
 
 .posterBlock b {
     font-size: 20px;
-    display: block;
-    color: #0e8cbc;
-    padding-bottom: 10px;
-    height: 70px;
-    
+    display: inline-block;
+    color: #8f95a3;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 5px;
+    height: 52px;
 }
 
 

@@ -5,14 +5,14 @@
 .listItems {
     z-index: 3;
     position: absolute;
-    border: 1px solid #3F7C9E;
     border-radius: .25rem;
     margin-top: 30px;
     padding: 5px;
-    color: #212529;
+    color: white;
     font-weight: 500;
     cursor: pointer;
-    background-color: #f9f9f9;
+    background-color: #222;
+    color: #808080;
 }
 .items {
     text-align: left;
@@ -20,17 +20,16 @@
     width: 150px;
 }
     .items:hover {
-        color: #616D78
+        color: white;
     }
 .titleFiltr {
-    font-weight: 600;
-    border: 1px solid #3F7C9E /*#08202e*/;
+    font-weight: 500;
+    border-bottom: 1px solid #808080;
     padding: 5px;
-    border-radius: 4px;
     cursor: pointer;
     text-align: center;
     margin: 0px 20px;
-    color: #212529;
+    color: #808080;
 }
 @media (max-width: 768px){
     .titleFiltr{ flex-direction:column;
@@ -39,7 +38,7 @@
  }
  }
 .titleFiltr:hover {
-    background-color: #6c757d;
+    /*background-color: #222;*/
     color: white;
 }
 .showList {

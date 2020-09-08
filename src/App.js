@@ -7,20 +7,7 @@ import LoginForm from './loginForm/loginForm'
 import PosterBlock from './poster-block/poster-block'
 import CatalogFilter from './catalog-filter/catalog-filter'
 import MovieCards from './movieCards/movieCards'
-import zodiac from './Images/zodiac.jpg'
-import atlantis from './Images/atlantis.jpg'
-import garry from './Images/garry poter.jpg'
-import citizen from './Images/law-abiding citizen.jpg'
-import rempage from './Images/rempage.jpg'
-import slown from './Images/slown.jpg'
-import unknow from './Images/unknow.jpg'
-import Apocalypto from './Images/Apocalypto.jpg'
-import Interstellar from './Images/Interstellar.jpg'
-import jungle from './Images/jungle.jpg'
-import sniper from './Images/sniper.jpg'
-import mind from './Images/mind.jpg'
 import garryBig from './Images/garry poter big.jpg'
-import wild from './Images/into the wild.jpg'
 import QuickLink from './quickLink/quickLink';
 import rempageBig from './Images/rempegeBig1.jpg'
 import slownBig from './Images/slownBig.jfif'
@@ -56,8 +43,7 @@ class App extends Component {
         filmPresent: [
             {
                 id: 1,
-                image: rempage,
-                imagePopup: rempageBig,
+                image: rempageBig,
                 name: 'Ремпейдж',
                 year: '2018',
                 actors: 'Двейн Джонсон, Наомі Гарріс, Малін Акерман',
@@ -76,8 +62,7 @@ class App extends Component {
             },
             {
                 id: 2,
-                image: slown,
-                imagePopup: slownBig,
+                image: slownBig,
                 name: 'Слоун',
                 year: '2018',
                 actors: 'Джесіка Честейн, Марк Стронг, Гугу Мбата-Роу',
@@ -88,8 +73,7 @@ class App extends Component {
             },
             {
                 id: 3,
-                image: unknow,
-                imagePopup: unknownBig,
+                image: unknownBig,
                 name: 'Невідомий',
                 year: '2011',
                 actors: 'Леонард Голдберг, Джоел Сілвер, Ендрю Рона',
@@ -99,8 +83,7 @@ class App extends Component {
             },
             {
                 id: 4,
-                image: zodiac,
-                imagePopup: zodiacBig,
+                image: zodiacBig,
                 name: 'Зодіак',
                 year: '2007',
                 actors: 'Джейк Джилленгол, Марк Руффало, Роберт Дауні',
@@ -110,8 +93,7 @@ class App extends Component {
             },
             {
                 id: 5,
-                image: citizen,
-                imagePopup: cityzenBig,
+                image: cityzenBig,
                 name: 'Законослухляний громадянин',
                 year: '2009',
                 actors: 'Джерард Батлер,Курт Віммер,Лукас Фостер',
@@ -121,8 +103,7 @@ class App extends Component {
             },
             {
                 id: 6,
-                image: atlantis,
-                imagePopup: atlantysBig,
+                image: atlantysBig,
                 name: 'Атлантида',
                 year: '2017',
                 actors: 'Рей Стівенсон, Девід Оукс,Аура Гаррідо',
@@ -133,8 +114,7 @@ class App extends Component {
             },
             {
                 id: 7,
-                image: garry,
-                imagePopup: garryBig,
+                image: garryBig,
                 name: 'Гаррі Потер і філософський камінь',
                 year: '2002',
                 actors: 'Деніел Редкліфф, Руперт Грінт, Емма Вотсон',
@@ -144,8 +124,7 @@ class App extends Component {
             },
             {
                 id: 8,
-                image: Apocalypto,
-                imagePopup: apocalyptoBig,
+                image: apocalyptoBig,
                 name: 'Апокаліпсис',
                 year: '2006',
                 actors: 'Руді Янблад, Далія Ернандез',
@@ -155,8 +134,7 @@ class App extends Component {
             },
             {
                 id: 9,
-                image: Interstellar,
-                imagePopup: interstellarBig,
+                image: interstellarBig,
                 name: 'Інтерстеллар',
                 year: '2014',
                 actors: 'Меттью Макконехі, Енн Гетевей, Джессіка Честейн',
@@ -166,8 +144,7 @@ class App extends Component {
             },
             {
                 id: 10,
-                image: jungle,
-                imagePopup: jungleBig,
+                image: jungleBig,
                 name: 'Джунглі',
                 year: '2017',
                 actors: 'Деніел Редкліфф, Алекс Рассел, Томас Кречманн',
@@ -177,8 +154,7 @@ class App extends Component {
             },
             {
                 id: 11,
-                image: sniper,
-                imagePopup: sniperBig,
+                image: sniperBig,
                 name: 'Снайпер',
                 year: '2014',
                 actors: 'Бредлі Купер, Сієна Міллер, Макс Чарльз',
@@ -188,8 +164,7 @@ class App extends Component {
             },
             {
                 id: 12,
-                image: mind,
-                imagePopup: mindBig,
+                image: mindBig,
                 name: 'Ігри розуму',
                 year: '2001',
                 actors: 'Рассел Кроу, Ед Гарріс, Дженніфер Коннеллі',
@@ -199,8 +174,7 @@ class App extends Component {
             },
             {
                 id: 13,
-                image: wild,
-                imagePopup: wildBig,
+                image: wildBig,
                 name: 'В диких умовах',
                 year: '2007',
                 actors: 'Еміль Гірш, Марсія Гей Гарден, Вільям Герт,',
@@ -455,13 +429,12 @@ class App extends Component {
                         </div>
                     </div>
                 </div>
-            
-                <div className=' container' style={{ marginTop: '30px' }}>
-                    <div className='jumbotron'>
+                    <div className=' container' style={{ marginTop: '30px' }}>
+                        <div /*style={{ width: '1200px' }}*/ className='jumbotron'>
                         <div>
-                            <div>
-                                    <div className='catalog-content-inner'>
-                                        <div className='container catalogContent'>
+                                <div>
+                                    <div style={{ borderBottom:'1px solid #222' }} className='catalog-content-inner borderLine'>
+                                        <div className='container borderLine'>
                                         <ul  className="d-flex justify-content-center transoformColumn ">
                                             <CatalogFilter
                                                 name1={this.state.catalogFilter[0].catalogName}
@@ -500,7 +473,7 @@ class App extends Component {
                                             <Route path='/page/2' component={() => filmPoster.slice(5, 10)} />
                                             <Route path='/page/3' component={() => filmPoster.slice(10, 14)} />
                                             <Route path='/loginForm' component={LoginForm} />
-                                            <Route path='/signUp' component={SignUp} />
+                                            <Route path='loginForm/signUp' component={SignUp} />
                                             <Route path='/movieDescription' component={() => filmCards[0]} />
                                             {this.state.disabledFilm && <h1 className='col-12'>За вашим запитом нічого не знайдено</h1>}
 
@@ -533,7 +506,7 @@ class App extends Component {
                    
 
                     <footer>
-                        <div /*className='d-flex justify-content-around'*/>
+                        <div>
                             <div className = 'footerContacts'>
                             <div>
                                   <div>
@@ -554,7 +527,6 @@ class App extends Component {
                             <div className='copyright'><h6> © 2020 Filmoteca.me </h6></div>
                         </div>
                     </footer>
-                  
                 </Router>
                     </div>
         )

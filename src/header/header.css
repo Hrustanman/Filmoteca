@@ -5,11 +5,11 @@
     pointer-events: none;
 }
 header nav {
-    background-color: #292c33 /*#08202e*/;
+    background-color: #181818 /*#08202e*/;
  
 }
-.navbar-light .navbar-nav .nav-link  {
-    color: rgba(255,255,255,.6);
+.navbar-light .navbar-nav .nav-link {
+    color: #808080 ;
 }
 .navbar-light .navbar-nav .nav-link:hover {
         color: white;}
@@ -26,14 +26,29 @@ header nav {
         /*color: #3F7C9E;*/
         opacity: 0.5;
     }
-@media (max-width: 1170px)
-and (min-width:990px){
-    .link {
+.dropdown-menu {
+    background-color: #222;
+}
+    .dropdown-menu a {
+        color: #808080;
+    }
+        .dropdown-menu a:hover {
+            background-color: #222;
+            color: white;
+        }
+        @media (max-width: 1189px)
+        and (min-width:990px) {
+            .link {
         margin-top: 5px !important;
        }
 }
-@media (max-width: 1030px)
-and (min-width:990px) {
+@media (max-width: 1183px)
+and (min-width:1150px) {
+    .link {
+        margin-left: 0px;
+    }
+}
+@media (max-width: 1030px) and (min-width:990px) {
     .indent {
         margin-top: 5px !important;
     }

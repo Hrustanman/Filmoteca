@@ -1,13 +1,15 @@
 
 .authorization {
-    background-color: #f9f9f9;
+    background-color: #222;
     border-radius: 4px;
     /*padding: 20px;*/
     width: 350px;
+    margin: 40px;
+    color: #808080;
 }
-.authorization h2 {
-    color:#48759A;
-    padding-top: 20px;
+    .authorization h2 {
+        color: #808080;
+        padding-top: 20px;
     }
     form div, h2 {
         padding-bottom: 20px
@@ -16,13 +18,18 @@
     margin-left: 20px;
     margin-right: 20px;
 }
+.authorization form {
+    border-bottom: 2px solid #181818;
+}
 
 .authorization input, .authorization button {
     width: 100%;
     padding: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #808080;
     border-radius: 3px;
     box-shadow: inset 0 0 3px #ccc;
+    background-color: #292c33;
+    color: #808080;
 }
 .authorization label > input {
     box-shadow: none;
@@ -34,21 +41,21 @@ button:hover,input:hover {
 }
 .authorization p {
     text-align: left;
-    margin:unset
-}
+    margin: unset;
+} 
 .authorizationTooltip {
     display: flex;
     justify-content: space-between;
     font-size: 12px;
 }
+    .authorizationTooltip a {
+        color: #808080;
+    }
 
-.authorization label {
-    font-size: 12px;
-}
-.authorizationSocnet {
-    background-color: #eee;
+    .authorization label {
+        font-size: 12px;
+    }
 
-}
 .authorizationSocnet p {
   text-align: center;
   padding-top: 20px;

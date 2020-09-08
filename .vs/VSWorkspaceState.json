@@ -8,9 +8,8 @@
     "\\src\\movieCards",
     "\\src\\poster-block",
     "\\src\\quickLink",
-    "\\src\\signUp",
-    "\\src\\tryPoster"
+    "\\src\\signUp"
   ],
-  "SelectedNode": "\\src\\tryPoster\\tryPoster.js",
+  "SelectedNode": "\\src\\App.js",
   "PreviewInSolutionExplorer": false
 }

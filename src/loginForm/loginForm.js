@@ -22,7 +22,7 @@ class LoginForm extends Component {
                     </div>
                     <div className= 'authorizationTooltip'>
                         <a href='#'> Забули пароль?</a>
-                        <Link  to ='/signUp' >Зареєструватись</Link> 
+                        <Link  to ='/loginForm/signUp' >Зареєструватись</Link> 
                     </div>
                     <div>
                         <button>Увійти</button>

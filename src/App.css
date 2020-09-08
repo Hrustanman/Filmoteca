@@ -8,7 +8,10 @@ body {
 }
 
 .jumbotron {
-    background-color: #eee;
+    background-color: #181818;
+    padding: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 } 
 
 .red {
@@ -18,10 +21,6 @@ body {
 li {
     list-style-type: none
 }
-/*.filter_genre {
-    border: 2px solid;                                                                                                                                                                    
-    margin: 1rem;                       
-}*/
 
 
 .PosterBlock {
@@ -30,13 +29,12 @@ li {
 .linkunderline {
     text-decoration: #3F7C9E underline;
 }
-.catalogContent {
-    border-bottom: 2px solid #a7b3cb;
-    margin-bottom: 30px;
+.borderLine {
+    border-bottom: 2px solid #222;
 }
 footer {
     color: white;
-    background-color: #292c33;
+    background-color: #181818;
     padding: 20px;
     opacity: 0.8;
 }

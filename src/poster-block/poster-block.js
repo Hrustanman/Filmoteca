@@ -8,12 +8,12 @@ class PosterBlock extends Component {
     }
     visibleFilmposter = () => {
 
-        this.setState({ visible: true  })
+        this.setState({ visible: true})
 
     }
     nonVisibleFilmposter = () => {
 
-        this.setState({ visible: false  })
+        this.setState({ visible: false})
 
     }
  
@@ -22,12 +22,11 @@ class PosterBlock extends Component {
         return(
 
             <div className='posterBlock my-3 mx-3' onMouseMove={this.visibleFilmposter}
-            onMouseLeave={this.nonVisibleFilmposter}
+             onMouseLeave={this.nonVisibleFilmposter}
          
             >
-
-                <div>
-                    <Link to='movieDescription'> <img src={this.props.imagePopup} /> </Link>
+<div>
+                    <Link to='movieDescription'> <img src={this.props.image} /> </Link>
                     <b>{this.props.name}</b>
                 </div>
                 <div>

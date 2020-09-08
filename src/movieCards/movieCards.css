@@ -1,10 +1,10 @@
 
 .movieCard {
     display: flex;
-    background-color: #f9f9f9;
     text-align: justify;
     border-radius: 4px;
     height: 100%;
+    margin: 40px;
 }
 .filmImage{
     width:40%;
@@ -16,6 +16,7 @@
     max-width: 60%;
     font-size: 14px;
     margin: 20px;
+    color: white;
 
 }
     .filmDiskription div {
@@ -27,8 +28,8 @@
      
     }
     .filmDiskription h1 {
-            color: #48759A;
-        }
+        color: #8f95a3;
+    }
 .movieCard img {
    max-width: 100%;
    }
@@ -38,8 +39,9 @@
     font-weight: 700;
     line-height: 20px;
     text-align: left;
-    color: #688297;
+    color: #808080;
     text-align: left;
+    font-family:
 }
 
 .label {
