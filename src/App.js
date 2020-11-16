@@ -30,16 +30,15 @@ import linkedin from './Images/Icon/in.svg'
 import yt from './Images/Icon/yt.svg'
 import { } from 'react-icons'
 import Popup from 'reactjs-popup'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-
-
+import itbutton from './index.js'
 
 
 
 class App extends Component {
-
-    state = {
+ 
+    state= {
         filmPresent: [
             {
                 id: 1,
@@ -283,7 +282,7 @@ class App extends Component {
         tern: '',
         visiblePoster: [],
         disabledFilm: false,
-        next : 1
+        next : 1,
     }
     componentDidMount() {
         window.addEventListener('load', this.Clicker);
@@ -313,7 +312,7 @@ class App extends Component {
     }
    
     previousPage = () => {
-        this.setState({ next: --this.state.next })
+        this.setState({ next: --this.state.next }) 
     }
     onLabelChange = (e) => {
         this.setState({ tern: e.target.value })
@@ -373,6 +372,10 @@ class App extends Component {
     quickLinkChange = (quikLink) => {
         this.setState({ tern: quikLink }, this.Clicker)
     }
+    
+    //itbutton = () => {
+    //    this.setState((state) => { return {next: state.next + 1 } })
+    //}
 
     render() {
 
@@ -384,7 +387,7 @@ class App extends Component {
                     //year={filmPresent.year}
                     //{...visiblePoster}
                     key={visiblePoster.id}
-                    {...visiblePoster}
+                    {...visiblePoster} 
                 //key={filmPresent.id}
                 //onDel={() => this.onDel(filmPresent.id)}
                 />
@@ -396,6 +399,7 @@ class App extends Component {
                 <MovieCards
                     //filmImage={filmPresent.image}
                     {...filmPresent}
+                    //it={itbutton}
                 />
             )
 
@@ -418,8 +422,7 @@ class App extends Component {
                         onSubmit={this.onSubmit}
                         value={this.state.tern}
                         Clicker={this.Clicker}
-                        
-                    />
+                 />
                  
 
                 <div className='container'>
@@ -460,9 +463,6 @@ class App extends Component {
                                                 key={this.state.catalogFilter[3].id}
                                                 quickLinkChange={() => this.quickLinkChange}
                                             />
-                                         
-                                               
-                                          
                                             </ul>
                                            
                                         </div>
@@ -474,9 +474,18 @@ class App extends Component {
                                             <Route path='/page/3' component={() => filmPoster.slice(10, 14)} />
                                             <Route path='/loginForm' component={LoginForm} />
                                             <Route path='loginForm/signUp' component={SignUp} />
-                                            <Route path='/movieDescription' component={() => filmCards[0]} />
+                                      
+                                            <Route path={'/movieDescription/:id'}
+                                                render={({ match, history, location }) => {
+                                                    console.log(match)
+                                                    //console.log(history)
+                                                    //console.log(location)
+                                                    const { id } = match.params
+                                                    return (<MovieCards />)
+                                                }} />
                                             {this.state.disabledFilm && <h1 className='col-12'>За вашим запитом нічого не знайдено</h1>}
-
+                
+                                            <NavLink to='/movieDescription/shits'>sdsd</NavLink>
                                     </div>
                                     <div>
                                     </div>  
@@ -520,7 +529,7 @@ class App extends Component {
                                     <div > <h6> Ми у соцмережах:</h6> </div>
                                     <a href = '#'> <img src={facebook} /> </a>
                                     <a href='#'><img src={twitter} /> </a>
-                                    <a href='#'> <img src={linkedin} /> </a>
+                                    <a href='#'><img src={linkedin} /> </a>
                                     <a href='#'><img src={yt} /> </a>
                                 </div>
                             </div>
@@ -528,9 +537,10 @@ class App extends Component {
                         </div>
                     </footer>
                 </Router>
-                    </div>
+                    </div> 
         )
     }
 }
 
 export default App;
+

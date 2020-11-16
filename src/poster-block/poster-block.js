@@ -23,10 +23,8 @@ class PosterBlock extends Component {
 
             <div className='posterBlock my-3 mx-3' onMouseMove={this.visibleFilmposter}
              onMouseLeave={this.nonVisibleFilmposter}
-         
             >
-<div>
-                    <Link to='movieDescription'> <img src={this.props.image} /> </Link>
+                <div>   <Link to={'/movieDescription/' + this.props.id }> <img src={this.props.image} /> </Link>
                     <b>{this.props.name}</b>
                 </div>
                 <div>

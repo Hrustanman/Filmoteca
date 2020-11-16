@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import './movieCards.css'
+import { withRouter } from 'react-router-dom'
+
 class MovieCards extends Component {
     render() {
         return (
@@ -58,7 +60,6 @@ class MovieCards extends Component {
                         <span className='label'>Кінокомпанія:</span>
                         <span>{this.props.company}</span>
                     </div>
-                   
                     
                 </div>
 
@@ -66,6 +67,6 @@ class MovieCards extends Component {
             )
     }
 }
-export default MovieCards
+export default withRouter(MovieCards)
 
   

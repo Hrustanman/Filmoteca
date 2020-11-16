@@ -105,6 +105,20 @@ onClick = { this.disappear }
                     {
                         .class1 {
                     widht: 40px;
-            }
-            }
+}
+}
                 </style>
+
+
+
+
+            <Route path={'/movieDescription/' + this.state.filmPresent[1].id}
+        component={() => filmCards[0]} />
+
+            <Route path={'/movieDescription/:id'}
+                render={(match, location, history) => {
+                    const { id } = match.params;
+                    console.log(match.params)
+                    alert(match.params)
+                    return <MovieCards id={this.props.id} />
+                }} />
