@@ -33,11 +33,12 @@ import Popup from 'reactjs-popup'
 import { Link, NavLink } from 'react-router-dom'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import itbutton from './index.js'
+import { useHistory } from 'react-router-dom'
 
 
 
 class App extends Component {
- 
+
     state= {
         filmPresent: [
             {
@@ -61,7 +62,8 @@ class App extends Component {
             },
             {
                 id: 2,
-                image: slownBig,
+                image: rempageBig,
+                discription: "Девіс Окою, колишній спецназівець, борець з браконьєрами, а нині фахівець з мавп, давно зрозумів, що спілкуватися з тваринами йому куди простіше, ніж з людьми. Своє подальше життя він вирішив присвятити роботі в каліфорнійському національному заповіднику: тут Девіс контролює популяцію горил, а заодно наглядає за своїм улюбленцем - горилою-альбіносом Джорджем, якого він колись врятував від смерті. В черговий раз заступивши на зміну, Девіс виявляє, що за ніч з Джорджем відбулися жахливі зміни: він став набагато більше, в рази сильніше і перетворився на некерованого і лютого звіра. Намагаючись у всьому розібратися, Девіс знайомиться з доктором Кейт Колдуелл, яка визнається, що за всім, що відбувається варто корпорація «Енерджін» і її експерименти в області генної інженерії, які вийшли з-під контролю. Кейт і сама колись брала участь в розробках «Енерджін», тому вона єдина, хто може вилікувати Джорджа. Незабаром з'ясовується, що Джордж - не єдине тварина, яке постраждало в результаті помилок корпорації: в країні виявляються ще два звіра-мутанта - дев'ятиметровий вовк і гігантський алігатор. При цьому тварини несподівано об'єднуються і спрямовуються в Чикаго, погрожуючи стерти місто з лиця землі.Фільм «Ремпейдж», заснований на однойменній відеогрі 1980-х років, ви можете подивитися онлайн на нашому сайті.",
                 name: 'Слоун',
                 year: '2018',
                 actors: 'Джесіка Честейн, Марк Стронг, Гугу Мбата-Роу',
@@ -378,7 +380,7 @@ class App extends Component {
     //}
 
     render() {
-
+        //const history = useHistory()
         let filmPoster = this.state.visiblePoster.map((visiblePoster) => { 
             return (
                 <PosterBlock
@@ -414,6 +416,7 @@ class App extends Component {
               />
             )
         })
+        let item = this.state.filmPresent.id
         return (
             <div>
                 <Router>
@@ -477,12 +480,10 @@ class App extends Component {
                                       
                                             <Route path={'/movieDescription/:id'}
                                                 render={({ match, history, location }) => {
-                                                    console.log(match)
-                                                    //console.log(history)
-                                                    //console.log(location)
+                                                    console.log(match.params.id)
                                                     const { id } = match.params
-                                                    return (<MovieCards />)
-                                                }} />
+                                                    return (<MovieCards /*id={id}*/ {...this.state.filmPresent[id - 1]} />)
+                                                }} /> 
                                             {this.state.disabledFilm && <h1 className='col-12'>За вашим запитом нічого не знайдено</h1>}
                 
                                             <NavLink to='/movieDescription/shits'>sdsd</NavLink>

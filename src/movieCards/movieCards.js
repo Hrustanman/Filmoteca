@@ -59,6 +59,7 @@ class MovieCards extends Component {
                     <div>
                         <span className='label'>Кінокомпанія:</span>
                         <span>{this.props.company}</span>
+                        <span>ID: {this.props.id}</span>
                     </div>
                     
                 </div>
