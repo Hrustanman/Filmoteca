@@ -7,20 +7,20 @@ import LoginForm from './loginForm/loginForm'
 import PosterBlock from './poster-block/poster-block'
 import CatalogFilter from './catalog-filter/catalog-filter'
 import MovieCards from './movieCards/movieCards'
-import garryBig from './Images/garry poter big.jpg'
+import harry from './Images/harry.jpg'
 import QuickLink from './quickLink/quickLink';
-import rempageBig from './Images/rempegeBig1.jpg'
-import slownBig from './Images/slownBig.jfif'
-import unknownBig from './Images/unknownBig.jfif'
-import zodiacBig from './Images/zodiacBig.jfif'
-import cityzenBig from './Images/cityzenBig.jfif'
-import atlantysBig from './Images/atlantysBig.jfif'
-import apocalyptoBig from './Images/apocalyptoBig.jfif'
-import interstellarBig from './Images/interstellarBig.jfif'
-import jungleBig from './Images/jungleBig.jfif'
-import sniperBig from './Images/sniperBig.jfif'
-import mindBig from './Images/mindBig.jfif'
-import wildBig from './Images/wildBig.jfif'
+import rampage from './Images/rampage.jpg'
+import sloane from './Images/sloane.jpg'
+import unknown from './Images/unknown.jpg'
+import zodiac from './Images/zodiac.jpg'
+import lowAbiding from './Images/law-abiding.jpg'
+import atlantis from './Images/atlantis.jpg'
+import apocalypto from './Images/apocalypto.jpg'
+import interstellar from './Images/interstellar.jpg'
+import jungle from './Images/jungle.jpg'
+import sniper from './Images/sniper.jpg'
+import beautifulMind from './Images/beautifulMind.jpg'
+import intoTheWild from './Images/intoTheWild.jpg'
 import envelope from './Images/Icon/envelope.png'
 import iconePhone from './Images/Icon/iconPhone.png'
 import mapflag from './Images/Icon/mapflag.png'
@@ -34,187 +34,16 @@ import { Link, NavLink } from 'react-router-dom'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import itbutton from './index.js'
 import { useHistory } from 'react-router-dom'
+import { catalogFilterData,filmPresentData } from './example'
 
 
 
 class App extends Component {
-
-    state= {
-        filmPresent: [
-            {
-                id: 1,
-                image: rempageBig,
-                name: 'Ремпейдж',
-                year: '2018',
-                actors: 'Двейн Джонсон, Наомі Гарріс, Малін Акерман',
-                director: 'Бред Пейто',
-                genre: 'Бойовик',
-                country: 'США',
-                discription: "Девіс Окою, колишній спецназівець, борець з браконьєрами, а нині фахівець з мавп, давно зрозумів, що спілкуватися з тваринами йому куди простіше, ніж з людьми. Своє подальше життя він вирішив присвятити роботі в каліфорнійському національному заповіднику: тут Девіс контролює популяцію горил, а заодно наглядає за своїм улюбленцем - горилою-альбіносом Джорджем, якого він колись врятував від смерті. В черговий раз заступивши на зміну, Девіс виявляє, що за ніч з Джорджем відбулися жахливі зміни: він став набагато більше, в рази сильніше і перетворився на некерованого і лютого звіра. Намагаючись у всьому розібратися, Девіс знайомиться з доктором Кейт Колдуелл, яка визнається, що за всім, що відбувається варто корпорація «Енерджін» і її експерименти в області генної інженерії, які вийшли з-під контролю. Кейт і сама колись брала участь в розробках «Енерджін», тому вона єдина, хто може вилікувати Джорджа. Незабаром з'ясовується, що Джордж - не єдине тварина, яке постраждало в результаті помилок корпорації: в країні виявляються ще два звіра-мутанта - дев'ятиметровий вовк і гігантський алігатор. При цьому тварини несподівано об'єднуються і спрямовуються в Чикаго, погрожуючи стерти місто з лиця землі.Фільм «Ремпейдж», заснований на однойменній відеогрі 1980-х років, ви можете подивитися онлайн на нашому сайті.",
-                secondaryActors: 'Джо Манганьєлло,Марлі Шелтон,Джеффрі Дін Морган',
-                producer: '	Бо Флінн, Хірам Гарсія, Двейн Джонсон',
-                screenwriter: "Карлтон К'юз Раян Енгл,Раян Дж.Кондел",
-                operator: 'Джерон Презент',
-                duration: '107 хвилин',
-                translation: 'Професійний',
-                company: 'New Line Cinema,Twisted Media, Wrigley Pictures'
-
-            },
-            {
-                id: 2,
-                image: rempageBig,
-                discription: "Девіс Окою, колишній спецназівець, борець з браконьєрами, а нині фахівець з мавп, давно зрозумів, що спілкуватися з тваринами йому куди простіше, ніж з людьми. Своє подальше життя він вирішив присвятити роботі в каліфорнійському національному заповіднику: тут Девіс контролює популяцію горил, а заодно наглядає за своїм улюбленцем - горилою-альбіносом Джорджем, якого він колись врятував від смерті. В черговий раз заступивши на зміну, Девіс виявляє, що за ніч з Джорджем відбулися жахливі зміни: він став набагато більше, в рази сильніше і перетворився на некерованого і лютого звіра. Намагаючись у всьому розібратися, Девіс знайомиться з доктором Кейт Колдуелл, яка визнається, що за всім, що відбувається варто корпорація «Енерджін» і її експерименти в області генної інженерії, які вийшли з-під контролю. Кейт і сама колись брала участь в розробках «Енерджін», тому вона єдина, хто може вилікувати Джорджа. Незабаром з'ясовується, що Джордж - не єдине тварина, яке постраждало в результаті помилок корпорації: в країні виявляються ще два звіра-мутанта - дев'ятиметровий вовк і гігантський алігатор. При цьому тварини несподівано об'єднуються і спрямовуються в Чикаго, погрожуючи стерти місто з лиця землі.Фільм «Ремпейдж», заснований на однойменній відеогрі 1980-х років, ви можете подивитися онлайн на нашому сайті.",
-                name: 'Слоун',
-                year: '2018',
-                actors: 'Джесіка Честейн, Марк Стронг, Гугу Мбата-Роу',
-                director: 'Джонн Медден',
-                genre: 'драма',
-                country: 'США,Франція'
-
-            },
-            {
-                id: 3,
-                image: unknownBig,
-                name: 'Невідомий',
-                year: '2011',
-                actors: 'Леонард Голдберг, Джоел Сілвер, Ендрю Рона',
-                director: '	Хауме Кольєт-Серра',
-                genre: 'трилер',
-                country: 'США, Німеччина'
-            },
-            {
-                id: 4,
-                image: zodiacBig,
-                name: 'Зодіак',
-                year: '2007',
-                actors: 'Джейк Джилленгол, Марк Руффало, Роберт Дауні',
-                director: 'Девід Фінчер',
-                genre: '	трилер',
-                country: 'США'
-            },
-            {
-                id: 5,
-                image: cityzenBig,
-                name: 'Законослухляний громадянин',
-                year: '2009',
-                actors: 'Джерард Батлер,Курт Віммер,Лукас Фостер',
-                director: 'Фелікс Гері Грей',
-                genre: 'Трилер',
-                country: 'США'
-            },
-            {
-                id: 6,
-                image: atlantysBig,
-                name: 'Атлантида',
-                year: '2017',
-                actors: 'Рей Стівенсон, Девід Оукс,Аура Гаррідо',
-                director: 'Ксавьє Жанс',
-                genre: 'фантастика',
-                country: 'Іспанія, Франція',
-
-            },
-            {
-                id: 7,
-                image: garryBig,
-                name: 'Гаррі Потер і філософський камінь',
-                year: '2002',
-                actors: 'Деніел Редкліфф, Руперт Грінт, Емма Вотсон',
-                director: 'Кріс Коламбус',
-                genre: 'Фентезі',
-                country: 'США, Велика Британія'
-            },
-            {
-                id: 8,
-                image: apocalyptoBig,
-                name: 'Апокаліпсис',
-                year: '2006',
-                actors: 'Руді Янблад, Далія Ернандез',
-                director: 'Мел Гібсон',
-                genre: 'Трилер',
-                country: 'США'
-            },
-            {
-                id: 9,
-                image: interstellarBig,
-                name: 'Інтерстеллар',
-                year: '2014',
-                actors: 'Меттью Макконехі, Енн Гетевей, Джессіка Честейн',
-                director: 'Крістофер Нолан',
-                genre: 'фантастика',
-                country: 'США, Велика Британія'
-            },
-            {
-                id: 10,
-                image: jungleBig,
-                name: 'Джунглі',
-                year: '2017',
-                actors: 'Деніел Редкліфф, Алекс Рассел, Томас Кречманн',
-                director: '	Грег Маклін',
-                genre: 'пригодницький',
-                country: 'Колумбія, Австралія'
-            },
-            {
-                id: 11,
-                image: sniperBig,
-                name: 'Снайпер',
-                year: '2014',
-                actors: 'Бредлі Купер, Сієна Міллер, Макс Чарльз',
-                director: 'Клінт Іствуд',
-                genre: 'біографія',
-                country: 'США'
-            },
-            {
-                id: 12,
-                image: mindBig,
-                name: 'Ігри розуму',
-                year: '2001',
-                actors: 'Рассел Кроу, Ед Гарріс, Дженніфер Коннеллі',
-                director: 'Рон Говард',
-                genre: 'драма',
-                country: 'США'
-            },
-            {
-                id: 13,
-                image: wildBig,
-                name: 'В диких умовах',
-                year: '2007',
-                actors: 'Еміль Гірш, Марсія Гей Гарден, Вільям Герт,',
-                director: 'Шон Пенн',
-                genre: 'пригодницький',
-                country: 'США'
-            }
-
-
-        ],
-        catalogFilter: [
-            {
-                catalogName: 'Всі жанри',
-                catalogItem: ['Артхаус ', 'Біографія', 'Бойовик', 'Вестерн',
-                    'Військові', 'Детективи', 'Документальні', 'Драми',
-                    'Історичні', 'Комедії', 'Кримінал', 'Мелодрами', 'Містичні',
-                    'Пригодницькі', 'Музикальні', 'Жахи', 'Спорт', 'Фантистика',
-                    'Фентезі', 'Трилери'],
-                id: 1
-
-            },
-            {
-                catalogName: 'Всі роки',
-                catalogItem: ['2019', '2018', '2017', '2016', '2010-2017', '2000-2010', '1990-2000', '1980-1990'],
-                id: 2,
-
-            },
-            {
-                catalogName: 'Всі країни',
-                catalogItem: ['США', 'Франція', 'Канада', 'Німеччина', 'Росія', 'Польща', 'Великобританія', 'Данія', 'Швеція'],
-                id: 3
-            },
-            {
-                catalogName: 'По популярності',
-                catalogItem: ['По рейтингу IMDB', 'По касовим зборам', 'По новизні', 'По бюджету', 'По популярності'],
-                id: 4
-            },
-
-        ],
+    
+    state = {
+        filmPresent: filmPresentData,
+        
+        catalogFilter: catalogFilterData,
         quickLink: [
             {
                 quickLinkName: '2017',
@@ -396,16 +225,16 @@ class App extends Component {
             )
             
         })
-        let filmCards = this.state.filmPresent.map((filmPresent) => {
-            return (
-                <MovieCards
-                    //filmImage={filmPresent.image}
-                    {...filmPresent}
-                    //it={itbutton}
-                />
-            )
+        //let filmCards = this.state.filmPresent.map((filmPresent) => {
+        //    return (
+        //        <MovieCards
+        //            //filmImage={filmPresent.image}
+        //            {...filmPresent}
+        //            //it={itbutton}
+        //        />
+        //    )
 
-        })
+        //})
        
         let quickLink = this.state.quickLink.map((quickLink) => {
             return (
@@ -436,7 +265,7 @@ class App extends Component {
                     </div>
                 </div>
                     <div className=' container' style={{ marginTop: '30px' }}>
-                        <div /*style={{ width: '1200px' }}*/ className='jumbotron'>
+                        <div  className='jumbotron'>
                         <div>
                                 <div>
                                     <div style={{ borderBottom:'1px solid #222' }} className='catalog-content-inner borderLine'>
